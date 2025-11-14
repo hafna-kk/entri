@@ -16,7 +16,7 @@ int main(void)
 	{
 		PORTC=0b01000000;//set PC6 is high
 		_delay_ms(3000); //set 3 sec delay
-		PORTC=0b00000000;//set PD2 is low
+		PORTC=0b00000000;//set PC2 is low
 		_delay_ms(3000);//set 3 sec delay
 	}
 }
