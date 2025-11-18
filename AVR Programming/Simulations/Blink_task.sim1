@@ -1,0 +1,21 @@
+<circuit version="1.0.0-SR1" rev="1402" stepSize="1000000" stepsPS="1000000" NLsteps="100000" reaStep="1000000" animate="0" >
+
+<item itemtype="Led" CircId="Led-7" mainComp="false" Show_id="false" Show_Val="false" Pos="-868,-688" rotation="-180" hflip="1" vflip="1" label="Led-7" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Color="Yellow" Grounded="false" Threshold="2.4 V" MaxCurrent="0.03 A" Resistance="0.6 Ω" />
+
+<item itemtype="MCU" CircId="mega328-8" mainComp="false" Show_id="true" Show_Val="false" Pos="-808,-696" rotation="0" hflip="1" vflip="1" label="mega328-8" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" Frequency="16 MHz" Program="../../../Desktop/Embedded system/AVR Programming/Blink_task/Blink_task/Debug/Blink_task.hex" Auto_Load="false" Rst_enabled="false" Ext_Osc="false" Wdt_enabled="false" />
+
+<item itemtype="Ground" CircId="Ground-9" mainComp="false" Show_id="false" Show_Val="false" Pos="-904,-672" rotation="0" hflip="1" vflip="1" label="Ground-9" idLabPos="-16,8" labelrot="0" valLabPos="-16,20" valLabRot="0" />
+
+<item itemtype="Led" CircId="Led-13" mainComp="false" Show_id="false" Show_Val="false" Pos="-780,-548" rotation="-180" hflip="1" vflip="1" label="Led-13" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Color="Yellow" Grounded="false" Threshold="2.4 V" MaxCurrent="0.03 A" Resistance="0.6 Ω" />
+
+<item itemtype="Ground" CircId="Ground-15" mainComp="false" Show_id="false" Show_Val="false" Pos="-800,-524" rotation="0" hflip="1" vflip="1" label="Ground-15" idLabPos="-16,8" labelrot="0" valLabPos="-16,20" valLabRot="0" />
+
+<item itemtype="Connector" uid="connector-16" startpinid="Ground-9-Gnd" endpinid="Led-7-rPin" pointList="-904,-688,-884,-688" />
+
+<item itemtype="Connector" uid="connector-17" startpinid="Led-7-lPin" endpinid="mega328-8-PORTB0" pointList="-852,-688,-852,-584,-816,-584" />
+
+<item itemtype="Connector" uid="connector-18" startpinid="mega328-8-PORTB1" endpinid="Led-13-lPin" pointList="-768,-584,-764,-584,-764,-548" />
+
+<item itemtype="Connector" uid="connector-19" startpinid="Ground-15-Gnd" endpinid="Led-13-rPin" pointList="-800,-540,-800,-548,-796,-548" />
+
+</circuit>
