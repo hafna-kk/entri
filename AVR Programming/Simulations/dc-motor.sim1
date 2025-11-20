@@ -1,0 +1,21 @@
+<circuit version="1.0.0-SR1" rev="1402" stepSize="1000000" stepsPS="1000000" NLsteps="100000" reaStep="1000000" animate="0" >
+
+<item itemtype="MCU" CircId="mega328-1" mainComp="false" Show_id="true" Show_Val="false" Pos="684,464" rotation="0" hflip="1" vflip="1" label="mega328-1" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" Frequency="16 MHz" Program="../../Users/hafna/Desktop/Embedded system/AVR Programming/dc-motor/dc-motor/Debug/dc-motor.hex" Auto_Load="false" Rst_enabled="false" Ext_Osc="false" Wdt_enabled="false" />
+
+<item itemtype="DcMotor" CircId="DcMotor-2" mainComp="false" Show_id="true" Show_Val="false" Pos="604,664" rotation="-180" hflip="1" vflip="1" label="DcMotor-2" idLabPos="-22,-48" labelrot="0" valLabPos="-14,36" valLabRot="0" RPM_Nominal="60 _RPM" Volt_Nominal="5 V" Resistance="100 Ω" />
+
+<item itemtype="Subcircuit" CircId="L293-3" mainComp="false" Show_id="true" Show_Val="false" Pos="588,520" rotation="0" hflip="1" vflip="1" label="L293-3" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" Logic_Symbol="true" />
+
+<item itemtype="Voltage Source" CircId="Voltage Source-15" mainComp="false" ShowProp="MaxValue" Show_id="false" Show_Val="true" Pos="520,572" rotation="0" hflip="1" vflip="1" label="Voltage Source-15" idLabPos="-32,-48" labelrot="0" valLabPos="-8,30" valLabRot="0" Running="true" Value_Volt="5 V" MaxValue="5 V" />
+
+<item itemtype="Connector" uid="Connector-8" startpinid="L293-3-1A" endpinid="mega328-1-PORTD1" pointList="580,528,580,488,676,488" />
+
+<item itemtype="Connector" uid="Connector-12" startpinid="L293-3-2A" endpinid="mega328-1-PORTD0" pointList="580,536,544,536,544,480,676,480" />
+
+<item itemtype="Connector" uid="Connector-16" startpinid="L293-3-12EN" endpinid="Voltage Source-15-outPin" pointList="580,544,548,544,548,588" />
+
+<item itemtype="Connector" uid="Connector-17" startpinid="L293-3-1Y" endpinid="DcMotor-2-lPin" pointList="628,528,644,528,644,664" />
+
+<item itemtype="Connector" uid="Connector-18" startpinid="L293-3-2Y" endpinid="DcMotor-2-rPin" pointList="628,536,636,536,636,620,564,620,564,664" />
+
+</circuit>
