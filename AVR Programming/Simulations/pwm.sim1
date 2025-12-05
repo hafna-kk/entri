@@ -1,0 +1,13 @@
+<circuit version="1.0.0-SR1" rev="1402" stepSize="1000000" stepsPS="1000000" NLsteps="100000" reaStep="1000000" animate="0" >
+
+<item itemtype="MCU" CircId="mega328-1" mainComp="false" Show_id="true" Show_Val="false" Pos="764,668" rotation="0" hflip="1" vflip="1" label="mega328-1" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" Frequency="16 MHz" Program="../../Users/hafna/Desktop/Embedded system/AVR Programming/pwm/pwm/Debug/pwm.hex" Auto_Load="false" Rst_enabled="false" Ext_Osc="false" Wdt_enabled="false" />
+
+<item itemtype="Ground" CircId="Ground-2" mainComp="false" Show_id="false" Show_Val="false" Pos="692,800" rotation="0" hflip="1" vflip="1" label="Ground-2" idLabPos="-16,8" labelrot="0" valLabPos="-16,20" valLabRot="0" />
+
+<item itemtype="Led" CircId="Led-3" mainComp="false" Show_id="false" Show_Val="false" Pos="708,764" rotation="-180" hflip="1" vflip="1" label="Led-3" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Color="Yellow" Grounded="false" Threshold="2.4 V" MaxCurrent="0.03 A" Resistance="0.6 Ω" />
+
+<item itemtype="Connector" uid="Connector-4" startpinid="Led-3-lPin" endpinid="mega328-1-PORTD6" pointList="724,764,756,764" />
+
+<item itemtype="Connector" uid="Connector-5" startpinid="Led-3-rPin" endpinid="Ground-2-Gnd" pointList="692,764,692,784" />
+
+</circuit>
