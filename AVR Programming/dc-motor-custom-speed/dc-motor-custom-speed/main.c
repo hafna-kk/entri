@@ -17,16 +17,10 @@ int main(void)
 {
 	motor_init();
 
-	uint8_t speed;
-
+	
 	while (1)
-	{
-		// Example: user gives input manually
-		speed = 30;   // you can change this to any % (0–100)
-
-		motor_set_speed(speed);
-		motor_start();
-
-		while(1);  // stay here
+	{	
+		motor_set_speed();
+		
 	}
 }
