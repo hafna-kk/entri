@@ -1,7 +1,7 @@
 /*
- * External_interrupt.c
+ * External_interrupt_new.c
  *
- * Created: 08-12-2025 11:01:34
+ * Created: 09-12-2025 11:14:25
  * Author : hafna
  */ 
 #define F_CPU 16000000UL
@@ -22,7 +22,7 @@ int main(void)
 	// Configure PB5 and PB4 as outputs
 	DDRB |= (1<<DDB5) | (1<<DDB4);
 
-	// Clear any pending INT0 flag properly
+	// Clear any pending INT0 flag 
 	EIFR |= (1<<INTF0);
 
 	// Enable external interrupt 0
