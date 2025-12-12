@@ -26,7 +26,7 @@ volatile uint8_t interrupt_flag = 0;   // flag set by ISR
 // delay function
 void delay_ms(unsigned int t){
 	while(t--){
-		if (interrupt_flag == 1) return; // early exit 
+		
 		_delay_ms(1);
 	}
 }
@@ -130,7 +130,10 @@ int main(void)
 		go();
 		delay_ms(5000);
 		if(interrupt_flag == 1) 
-			{ special_sequence(); continue; } // Handle interrupt after delay
+			{ 
+				ready();        // Go to ORANGE first (Warning)
+				delay_ms(3000); // Wait for cars to slow down
+				special_sequence(); continue; } // Handle interrupt after delay
 		
 		//  ORANGE (before Red)
 		ready();
