@@ -3,60 +3,62 @@ traffic-dc.elf:     file format elf32-avr
 
 Sections:
 Idx Name          Size      VMA       LMA       File off  Algn
-  0 .data         00000000  00800100  00800100  00000224  2**0
+  0 .data         00000000  00800100  00800100  0000025c  2**0
                   CONTENTS, ALLOC, LOAD, DATA
-  1 .text         000001d0  00000000  00000000  00000054  2**1
+  1 .text         000001e8  00000000  00000000  00000074  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
-  2 .comment      00000030  00000000  00000000  00000224  2**0
+  2 .bss          00000001  00800100  00800100  0000025c  2**0
+                  ALLOC
+  3 .comment      00000030  00000000  00000000  0000025c  2**0
                   CONTENTS, READONLY
-  3 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  00000254  2**2
+  4 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  0000028c  2**2
                   CONTENTS, READONLY
-  4 .debug_aranges 00000060  00000000  00000000  00000294  2**0
+  5 .debug_aranges 00000060  00000000  00000000  000002cc  2**0
                   CONTENTS, READONLY, DEBUGGING
-  5 .debug_info   00000938  00000000  00000000  000002f4  2**0
+  6 .debug_info   000008e4  00000000  00000000  0000032c  2**0
                   CONTENTS, READONLY, DEBUGGING
-  6 .debug_abbrev 00000727  00000000  00000000  00000c2c  2**0
+  7 .debug_abbrev 00000718  00000000  00000000  00000c10  2**0
                   CONTENTS, READONLY, DEBUGGING
-  7 .debug_line   000003b6  00000000  00000000  00001353  2**0
+  8 .debug_line   000003e2  00000000  00000000  00001328  2**0
                   CONTENTS, READONLY, DEBUGGING
-  8 .debug_frame  000000ec  00000000  00000000  0000170c  2**2
+  9 .debug_frame  000000b4  00000000  00000000  0000170c  2**2
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_str    000003bf  00000000  00000000  000017f8  2**0
+ 10 .debug_str    000003c8  00000000  00000000  000017c0  2**0
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_loc    00000159  00000000  00000000  00001bb7  2**0
+ 11 .debug_loc    000000ca  00000000  00000000  00001b88  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_ranges 00000050  00000000  00000000  00001d10  2**0
+ 12 .debug_ranges 00000050  00000000  00000000  00001c52  2**0
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
 
 00000000 <__vectors>:
    0:	0c 94 34 00 	jmp	0x68	; 0x68 <__ctors_end>
-   4:	0c 94 78 00 	jmp	0xf0	; 0xf0 <__vector_1>
-   8:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
-   c:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
-  10:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
-  14:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
-  18:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
-  1c:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
-  20:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
-  24:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
-  28:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
-  2c:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
-  30:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
-  34:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
-  38:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
-  3c:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
-  40:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
-  44:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
-  48:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
-  4c:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
-  50:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
-  54:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
-  58:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
-  5c:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
-  60:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
-  64:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+   4:	0c 94 84 00 	jmp	0x108	; 0x108 <__vector_1>
+   8:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+   c:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  10:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  14:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  18:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  1c:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  20:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  24:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  28:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  2c:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  30:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  34:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  38:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  3c:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  40:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  44:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  48:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  4c:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  50:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  54:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  58:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  5c:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  60:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  64:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
 
 00000068 <__ctors_end>:
   68:	11 24       	eor	r1, r1
@@ -65,272 +67,313 @@ Disassembly of section .text:
   6e:	d8 e0       	ldi	r29, 0x08	; 8
   70:	de bf       	out	0x3e, r29	; 62
   72:	cd bf       	out	0x3d, r28	; 61
-  74:	0e 94 b2 00 	call	0x164	; 0x164 <main>
-  78:	0c 94 e6 00 	jmp	0x1cc	; 0x1cc <_exit>
 
-0000007c <__bad_interrupt>:
-  7c:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+00000074 <__do_clear_bss>:
+  74:	21 e0       	ldi	r18, 0x01	; 1
+  76:	a0 e0       	ldi	r26, 0x00	; 0
+  78:	b1 e0       	ldi	r27, 0x01	; 1
+  7a:	01 c0       	rjmp	.+2      	; 0x7e <.do_clear_bss_start>
 
-00000080 <delay>:
+0000007c <.do_clear_bss_loop>:
+  7c:	1d 92       	st	X+, r1
 
-	motor_stop();
-	go();           // Back to GREEN
-}
-void delay(unsigned int t){ //set delay function
+0000007e <.do_clear_bss_start>:
+  7e:	a1 30       	cpi	r26, 0x01	; 1
+  80:	b2 07       	cpc	r27, r18
+  82:	e1 f7       	brne	.-8      	; 0x7c <.do_clear_bss_loop>
+  84:	0e 94 93 00 	call	0x126	; 0x126 <main>
+  88:	0c 94 f2 00 	jmp	0x1e4	; 0x1e4 <_exit>
+
+0000008c <__bad_interrupt>:
+  8c:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+00000090 <delay_ms>:
+volatile uint8_t interrupt_flag = 0;   // flag set by ISR
+
+
+// delay function
+void delay_ms(unsigned int t){
 	while(t--){
-  80:	07 c0       	rjmp	.+14     	; 0x90 <delay+0x10>
+  90:	0b c0       	rjmp	.+22     	; 0xa8 <delay_ms+0x18>
+		   if (interrupt_flag == 1) return; 
+  92:	80 91 00 01 	lds	r24, 0x0100	; 0x800100 <__DATA_REGION_ORIGIN__>
+  96:	81 30       	cpi	r24, 0x01	; 1
+  98:	61 f0       	breq	.+24     	; 0xb2 <delay_ms+0x22>
 	#else
 		//round up by default
 		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
 	#endif
 
 	__builtin_avr_delay_cycles(__ticks_dc);
-  82:	8f e9       	ldi	r24, 0x9F	; 159
-  84:	9f e0       	ldi	r25, 0x0F	; 15
-  86:	01 97       	sbiw	r24, 0x01	; 1
-  88:	f1 f7       	brne	.-4      	; 0x86 <delay+0x6>
-  8a:	00 c0       	rjmp	.+0      	; 0x8c <delay+0xc>
-  8c:	00 00       	nop
-  8e:	c9 01       	movw	r24, r18
-  90:	9c 01       	movw	r18, r24
-  92:	21 50       	subi	r18, 0x01	; 1
-  94:	31 09       	sbc	r19, r1
-  96:	89 2b       	or	r24, r25
-  98:	a1 f7       	brne	.-24     	; 0x82 <delay+0x2>
-		_delay_ms(1);
-	}
-}
-  9a:	08 95       	ret
+  9a:	8f e9       	ldi	r24, 0x9F	; 159
+  9c:	9f e0       	ldi	r25, 0x0F	; 15
+  9e:	01 97       	sbiw	r24, 0x01	; 1
+  a0:	f1 f7       	brne	.-4      	; 0x9e <delay_ms+0xe>
+  a2:	00 c0       	rjmp	.+0      	; 0xa4 <delay_ms+0x14>
+  a4:	00 00       	nop
+volatile uint8_t interrupt_flag = 0;   // flag set by ISR
 
-0000009c <stp>:
+
+// delay function
+void delay_ms(unsigned int t){
+	while(t--){
+  a6:	c9 01       	movw	r24, r18
+  a8:	9c 01       	movw	r18, r24
+  aa:	21 50       	subi	r18, 0x01	; 1
+  ac:	31 09       	sbc	r19, r1
+  ae:	89 2b       	or	r24, r25
+  b0:	81 f7       	brne	.-32     	; 0x92 <delay_ms+0x2>
+  b2:	08 95       	ret
+
+000000b4 <stp>:
+}
+
 
 // TRAFFIC LIGHT
-void stp(){           // RED ON
+void stp(void){
 	PORTB &= ~((1<<PB1)|(1<<PB2)|(1<<PB3));
-  9c:	85 b1       	in	r24, 0x05	; 5
-  9e:	81 7f       	andi	r24, 0xF1	; 241
-  a0:	85 b9       	out	0x05, r24	; 5
-	PORTB |= (1<<PB3);
-  a2:	85 b1       	in	r24, 0x05	; 5
-  a4:	88 60       	ori	r24, 0x08	; 8
-  a6:	85 b9       	out	0x05, r24	; 5
-  a8:	08 95       	ret
+  b4:	85 b1       	in	r24, 0x05	; 5
+  b6:	81 7f       	andi	r24, 0xF1	; 241
+  b8:	85 b9       	out	0x05, r24	; 5
+	PORTB |= (1<<PB3);    // RED
+  ba:	85 b1       	in	r24, 0x05	; 5
+  bc:	88 60       	ori	r24, 0x08	; 8
+  be:	85 b9       	out	0x05, r24	; 5
+  c0:	08 95       	ret
 
-000000aa <ready>:
-}
-void ready(){         // ORANGE ON
-	PORTB &= ~((1<<PB1)|(1<<PB2)|(1<<PB3));
-  aa:	85 b1       	in	r24, 0x05	; 5
-  ac:	81 7f       	andi	r24, 0xF1	; 241
-  ae:	85 b9       	out	0x05, r24	; 5
-	PORTB |= (1<<PB2);
-  b0:	85 b1       	in	r24, 0x05	; 5
-  b2:	84 60       	ori	r24, 0x04	; 4
-  b4:	85 b9       	out	0x05, r24	; 5
-  b6:	08 95       	ret
-
-000000b8 <go>:
-}
-void go(){            // GREEN ON
-	PORTB &= ~((1<<PB1)|(1<<PB2)|(1<<PB3));
-  b8:	85 b1       	in	r24, 0x05	; 5
-  ba:	81 7f       	andi	r24, 0xF1	; 241
-  bc:	85 b9       	out	0x05, r24	; 5
-	PORTB |= (1<<PB1);
-  be:	85 b1       	in	r24, 0x05	; 5
-  c0:	82 60       	ori	r24, 0x02	; 2
-  c2:	85 b9       	out	0x05, r24	; 5
-  c4:	08 95       	ret
-
-000000c6 <cw>:
+000000c2 <ready>:
 }
 
-// MOTOR FUNCTIONS
-void cw(){
+void ready(void){
+	PORTB &= ~((1<<PB1)|(1<<PB2)|(1<<PB3));
+  c2:	85 b1       	in	r24, 0x05	; 5
+  c4:	81 7f       	andi	r24, 0xF1	; 241
+  c6:	85 b9       	out	0x05, r24	; 5
+	PORTB |= (1<<PB2);    // ORANGE
+  c8:	85 b1       	in	r24, 0x05	; 5
+  ca:	84 60       	ori	r24, 0x04	; 4
+  cc:	85 b9       	out	0x05, r24	; 5
+  ce:	08 95       	ret
+
+000000d0 <go>:
+}
+
+void go(void){
+	PORTB &= ~((1<<PB1)|(1<<PB2)|(1<<PB3));
+  d0:	85 b1       	in	r24, 0x05	; 5
+  d2:	81 7f       	andi	r24, 0xF1	; 241
+  d4:	85 b9       	out	0x05, r24	; 5
+	PORTB |= (1<<PB1);    // GREEN
+  d6:	85 b1       	in	r24, 0x05	; 5
+  d8:	82 60       	ori	r24, 0x02	; 2
+  da:	85 b9       	out	0x05, r24	; 5
+  dc:	08 95       	ret
+
+000000de <cw>:
+}
+
+
+// MOTOR
+void cw(void){
 	PORTD |= (1<<PD0);
-  c6:	8b b1       	in	r24, 0x0b	; 11
-  c8:	81 60       	ori	r24, 0x01	; 1
-  ca:	8b b9       	out	0x0b, r24	; 11
+  de:	8b b1       	in	r24, 0x0b	; 11
+  e0:	81 60       	ori	r24, 0x01	; 1
+  e2:	8b b9       	out	0x0b, r24	; 11
 	PORTD &= ~(1<<PD1);
-  cc:	8b b1       	in	r24, 0x0b	; 11
-  ce:	8d 7f       	andi	r24, 0xFD	; 253
-  d0:	8b b9       	out	0x0b, r24	; 11
-  d2:	08 95       	ret
+  e4:	8b b1       	in	r24, 0x0b	; 11
+  e6:	8d 7f       	andi	r24, 0xFD	; 253
+  e8:	8b b9       	out	0x0b, r24	; 11
+  ea:	08 95       	ret
 
-000000d4 <acw>:
+000000ec <acw>:
 }
-void acw(){
+
+void acw(void){
 	PORTD |= (1<<PD1);
-  d4:	8b b1       	in	r24, 0x0b	; 11
-  d6:	82 60       	ori	r24, 0x02	; 2
-  d8:	8b b9       	out	0x0b, r24	; 11
+  ec:	8b b1       	in	r24, 0x0b	; 11
+  ee:	82 60       	ori	r24, 0x02	; 2
+  f0:	8b b9       	out	0x0b, r24	; 11
 	PORTD &= ~(1<<PD0);
-  da:	8b b1       	in	r24, 0x0b	; 11
-  dc:	8e 7f       	andi	r24, 0xFE	; 254
-  de:	8b b9       	out	0x0b, r24	; 11
-  e0:	08 95       	ret
+  f2:	8b b1       	in	r24, 0x0b	; 11
+  f4:	8e 7f       	andi	r24, 0xFE	; 254
+  f6:	8b b9       	out	0x0b, r24	; 11
+  f8:	08 95       	ret
 
-000000e2 <motor_stop>:
+000000fa <motor_stop>:
 }
-void motor_stop(){
+
+void motor_stop(void){
 	PORTD &= ~(1<<PD0);
-  e2:	8b b1       	in	r24, 0x0b	; 11
-  e4:	8e 7f       	andi	r24, 0xFE	; 254
-  e6:	8b b9       	out	0x0b, r24	; 11
+  fa:	8b b1       	in	r24, 0x0b	; 11
+  fc:	8e 7f       	andi	r24, 0xFE	; 254
+  fe:	8b b9       	out	0x0b, r24	; 11
 	PORTD &= ~(1<<PD1);
-  e8:	8b b1       	in	r24, 0x0b	; 11
-  ea:	8d 7f       	andi	r24, 0xFD	; 253
-  ec:	8b b9       	out	0x0b, r24	; 11
-  ee:	08 95       	ret
+ 100:	8b b1       	in	r24, 0x0b	; 11
+ 102:	8d 7f       	andi	r24, 0xFD	; 253
+ 104:	8b b9       	out	0x0b, r24	; 11
+ 106:	08 95       	ret
 
-000000f0 <__vector_1>:
-#include <avr/interrupt.h>
-#include <util/delay.h>
+00000108 <__vector_1>:
+}
 
-//ISR for external interrupt
+//ISR for External Interrupt
 ISR(INT0_vect)
 {
-  f0:	1f 92       	push	r1
-  f2:	0f 92       	push	r0
-  f4:	0f b6       	in	r0, 0x3f	; 63
-  f6:	0f 92       	push	r0
-  f8:	11 24       	eor	r1, r1
-  fa:	2f 93       	push	r18
-  fc:	3f 93       	push	r19
-  fe:	4f 93       	push	r20
- 100:	5f 93       	push	r21
- 102:	6f 93       	push	r22
- 104:	7f 93       	push	r23
- 106:	8f 93       	push	r24
- 108:	9f 93       	push	r25
- 10a:	af 93       	push	r26
- 10c:	bf 93       	push	r27
- 10e:	ef 93       	push	r30
- 110:	ff 93       	push	r31
-	stp();          // Force to RED
- 112:	0e 94 4e 00 	call	0x9c	; 0x9c <stp>
-
-	cw();           // CW for 10 seconds
- 116:	0e 94 63 00 	call	0xc6	; 0xc6 <cw>
-	delay(10000);
- 11a:	80 e1       	ldi	r24, 0x10	; 16
- 11c:	97 e2       	ldi	r25, 0x27	; 39
- 11e:	0e 94 40 00 	call	0x80	; 0x80 <delay>
-
-	motor_stop();   // Stop 20 seconds
- 122:	0e 94 71 00 	call	0xe2	; 0xe2 <motor_stop>
-	delay(20000);
- 126:	80 e2       	ldi	r24, 0x20	; 32
- 128:	9e e4       	ldi	r25, 0x4E	; 78
- 12a:	0e 94 40 00 	call	0x80	; 0x80 <delay>
-
-	acw();          // ACW for 10 seconds
- 12e:	0e 94 6a 00 	call	0xd4	; 0xd4 <acw>
-	delay(10000);
- 132:	80 e1       	ldi	r24, 0x10	; 16
- 134:	97 e2       	ldi	r25, 0x27	; 39
- 136:	0e 94 40 00 	call	0x80	; 0x80 <delay>
-
-	motor_stop();
- 13a:	0e 94 71 00 	call	0xe2	; 0xe2 <motor_stop>
-	go();           // Back to GREEN
- 13e:	0e 94 5c 00 	call	0xb8	; 0xb8 <go>
+ 108:	1f 92       	push	r1
+ 10a:	0f 92       	push	r0
+ 10c:	0f b6       	in	r0, 0x3f	; 63
+ 10e:	0f 92       	push	r0
+ 110:	11 24       	eor	r1, r1
+ 112:	8f 93       	push	r24
+	interrupt_flag = 1;   // set a flag
+ 114:	81 e0       	ldi	r24, 0x01	; 1
+ 116:	80 93 00 01 	sts	0x0100, r24	; 0x800100 <__DATA_REGION_ORIGIN__>
 }
- 142:	ff 91       	pop	r31
- 144:	ef 91       	pop	r30
- 146:	bf 91       	pop	r27
- 148:	af 91       	pop	r26
- 14a:	9f 91       	pop	r25
- 14c:	8f 91       	pop	r24
- 14e:	7f 91       	pop	r23
- 150:	6f 91       	pop	r22
- 152:	5f 91       	pop	r21
- 154:	4f 91       	pop	r20
- 156:	3f 91       	pop	r19
- 158:	2f 91       	pop	r18
- 15a:	0f 90       	pop	r0
- 15c:	0f be       	out	0x3f, r0	; 63
- 15e:	0f 90       	pop	r0
- 160:	1f 90       	pop	r1
- 162:	18 95       	reti
+ 11a:	8f 91       	pop	r24
+ 11c:	0f 90       	pop	r0
+ 11e:	0f be       	out	0x3f, r0	; 63
+ 120:	0f 90       	pop	r0
+ 122:	1f 90       	pop	r1
+ 124:	18 95       	reti
 
-00000164 <main>:
-}
+00000126 <main>:
+
 
 int main(void)
 {
-	// motor pins output
-	DDRD |= (1<<DDD0) | (1<<DDD1)|(1<<DDD6); //PD6 is pwm pin
- 164:	8a b1       	in	r24, 0x0a	; 10
- 166:	83 64       	ori	r24, 0x43	; 67
- 168:	8a b9       	out	0x0a, r24	; 10
+	// motor pins
+	DDRD |= (1<<DDD0) | (1<<DDD1) | (1<<DDD6);
+ 126:	8a b1       	in	r24, 0x0a	; 10
+ 128:	83 64       	ori	r24, 0x43	; 67
+ 12a:	8a b9       	out	0x0a, r24	; 10
 
-	// traffic light pins output
+	// traffic light pins
 	DDRB |= (1<<DDB1) | (1<<DDB2) | (1<<DDB3);
- 16a:	84 b1       	in	r24, 0x04	; 4
- 16c:	8e 60       	ori	r24, 0x0E	; 14
- 16e:	84 b9       	out	0x04, r24	; 4
+ 12c:	84 b1       	in	r24, 0x04	; 4
+ 12e:	8e 60       	ori	r24, 0x0E	; 14
+ 130:	84 b9       	out	0x04, r24	; 4
 
-	// switch input
-	DDRD &= ~(1<<DDD2);   // PD2 (INT0) as input
- 170:	8a b1       	in	r24, 0x0a	; 10
- 172:	8b 7f       	andi	r24, 0xFB	; 251
- 174:	8a b9       	out	0x0a, r24	; 10
-	PORTD |= (1<<PD2);    // enable pull-up
- 176:	8b b1       	in	r24, 0x0b	; 11
- 178:	84 60       	ori	r24, 0x04	; 4
- 17a:	8b b9       	out	0x0b, r24	; 11
+	// switch
+	DDRD &= ~(1<<DDD2);
+ 132:	8a b1       	in	r24, 0x0a	; 10
+ 134:	8b 7f       	andi	r24, 0xFB	; 251
+ 136:	8a b9       	out	0x0a, r24	; 10
+	PORTD |= (1<<PD2);  // enable pull-up
+ 138:	8b b1       	in	r24, 0x0b	; 11
+ 13a:	84 60       	ori	r24, 0x04	; 4
+ 13c:	8b b9       	out	0x0b, r24	; 11
 
-	PORTD |= (1<<PD6);   // ENABLE L293D output permanently
- 17c:	8b b1       	in	r24, 0x0b	; 11
- 17e:	80 64       	ori	r24, 0x40	; 64
- 180:	8b b9       	out	0x0b, r24	; 11
-	EIFR|=(1<<INTF0);// Clear flag
- 182:	8c b3       	in	r24, 0x1c	; 28
- 184:	81 60       	ori	r24, 0x01	; 1
- 186:	8c bb       	out	0x1c, r24	; 28
-	
-	EICRA|=((1<<ISC00)|(1<<ISC01)); //Configure INT0 for rising edge
- 188:	e9 e6       	ldi	r30, 0x69	; 105
- 18a:	f0 e0       	ldi	r31, 0x00	; 0
- 18c:	80 81       	ld	r24, Z
- 18e:	83 60       	ori	r24, 0x03	; 3
- 190:	80 83       	st	Z, r24
-	
-	EIMSK|=(1<<INT0);//Enable External interrupt0
- 192:	8d b3       	in	r24, 0x1d	; 29
- 194:	81 60       	ori	r24, 0x01	; 1
- 196:	8d bb       	out	0x1d, r24	; 29
-	
-	sei(); //Enable global interrupt
- 198:	78 94       	sei
+	PORTD |= (1<<PD6);  // enable L293D output
+ 13e:	8b b1       	in	r24, 0x0b	; 11
+ 140:	80 64       	ori	r24, 0x40	; 64
+ 142:	8b b9       	out	0x0b, r24	; 11
+
+	// interrupt configure
+	// INT0 low-level trigger
+	EICRA &= ~((1<<ISC00) | (1<<ISC01));  // ISC01 = 0, ISC00 = 0
+ 144:	e9 e6       	ldi	r30, 0x69	; 105
+ 146:	f0 e0       	ldi	r31, 0x00	; 0
+ 148:	80 81       	ld	r24, Z
+ 14a:	8c 7f       	andi	r24, 0xFC	; 252
+ 14c:	80 83       	st	Z, r24
+
+	EIFR |= (1<<INTF0);
+ 14e:	8c b3       	in	r24, 0x1c	; 28
+ 150:	81 60       	ori	r24, 0x01	; 1
+ 152:	8c bb       	out	0x1c, r24	; 28
+	EIMSK |= (1<<INT0); //configure external interrupt
+ 154:	8d b3       	in	r24, 0x1d	; 29
+ 156:	81 60       	ori	r24, 0x01	; 1
+ 158:	8d bb       	out	0x1d, r24	; 29
+	sei();//enable global interrupt
+ 15a:	78 94       	sei
+
 	while(1)
 	{
-		// normal sequence
-		go();      delay(5000);
- 19a:	0e 94 5c 00 	call	0xb8	; 0xb8 <go>
+		// If switch pressed   //ISR
+		if(interrupt_flag == 1)
+ 15c:	80 91 00 01 	lds	r24, 0x0100	; 0x800100 <__DATA_REGION_ORIGIN__>
+ 160:	81 30       	cpi	r24, 0x01	; 1
+ 162:	d9 f4       	brne	.+54     	; 0x19a <main+0x74>
+		{
+			
+
+			 interrupt_flag = 0;//clear the flag
+ 164:	10 92 00 01 	sts	0x0100, r1	; 0x800100 <__DATA_REGION_ORIGIN__>
+			stp();                // red
+ 168:	0e 94 5a 00 	call	0xb4	; 0xb4 <stp>
+			cw();                 // CW 10s
+ 16c:	0e 94 6f 00 	call	0xde	; 0xde <cw>
+			delay_ms(10000);
+ 170:	80 e1       	ldi	r24, 0x10	; 16
+ 172:	97 e2       	ldi	r25, 0x27	; 39
+ 174:	0e 94 48 00 	call	0x90	; 0x90 <delay_ms>
+
+			motor_stop();         // stop 20s
+ 178:	0e 94 7d 00 	call	0xfa	; 0xfa <motor_stop>
+			delay_ms(20000);
+ 17c:	80 e2       	ldi	r24, 0x20	; 32
+ 17e:	9e e4       	ldi	r25, 0x4E	; 78
+ 180:	0e 94 48 00 	call	0x90	; 0x90 <delay_ms>
+
+			acw();                // ACW 10s
+ 184:	0e 94 76 00 	call	0xec	; 0xec <acw>
+			delay_ms(10000);
+ 188:	80 e1       	ldi	r24, 0x10	; 16
+ 18a:	97 e2       	ldi	r25, 0x27	; 39
+ 18c:	0e 94 48 00 	call	0x90	; 0x90 <delay_ms>
+
+			motor_stop();
+ 190:	0e 94 7d 00 	call	0xfa	; 0xfa <motor_stop>
+			go();                 // back to green
+ 194:	0e 94 68 00 	call	0xd0	; 0xd0 <go>
+			continue;
+ 198:	e1 cf       	rjmp	.-62     	; 0x15c <main+0x36>
+		}
+
+		// NORMAL TRAFFIC SYSTEM
+	go();      
+ 19a:	0e 94 68 00 	call	0xd0	; 0xd0 <go>
+	delay_ms(5000);
  19e:	88 e8       	ldi	r24, 0x88	; 136
  1a0:	93 e1       	ldi	r25, 0x13	; 19
- 1a2:	0e 94 40 00 	call	0x80	; 0x80 <delay>
-		ready();   delay(3000);
- 1a6:	0e 94 55 00 	call	0xaa	; 0xaa <ready>
- 1aa:	88 eb       	ldi	r24, 0xB8	; 184
- 1ac:	9b e0       	ldi	r25, 0x0B	; 11
- 1ae:	0e 94 40 00 	call	0x80	; 0x80 <delay>
-		stp();     delay(5000);
- 1b2:	0e 94 4e 00 	call	0x9c	; 0x9c <stp>
- 1b6:	88 e8       	ldi	r24, 0x88	; 136
- 1b8:	93 e1       	ldi	r25, 0x13	; 19
- 1ba:	0e 94 40 00 	call	0x80	; 0x80 <delay>
-		ready();   delay(3000);
- 1be:	0e 94 55 00 	call	0xaa	; 0xaa <ready>
- 1c2:	88 eb       	ldi	r24, 0xB8	; 184
- 1c4:	9b e0       	ldi	r25, 0x0B	; 11
- 1c6:	0e 94 40 00 	call	0x80	; 0x80 <delay>
- 1ca:	e7 cf       	rjmp	.-50     	; 0x19a <main+0x36>
+ 1a2:	0e 94 48 00 	call	0x90	; 0x90 <delay_ms>
+	if(interrupt_flag == 1) continue;
+ 1a6:	80 91 00 01 	lds	r24, 0x0100	; 0x800100 <__DATA_REGION_ORIGIN__>
+ 1aa:	81 30       	cpi	r24, 0x01	; 1
+ 1ac:	b9 f2       	breq	.-82     	; 0x15c <main+0x36>
 
-000001cc <_exit>:
- 1cc:	f8 94       	cli
+	ready();  
+ 1ae:	0e 94 61 00 	call	0xc2	; 0xc2 <ready>
+	 delay_ms(3000);
+ 1b2:	88 eb       	ldi	r24, 0xB8	; 184
+ 1b4:	9b e0       	ldi	r25, 0x0B	; 11
+ 1b6:	0e 94 48 00 	call	0x90	; 0x90 <delay_ms>
+	if(interrupt_flag == 1) continue;
+ 1ba:	80 91 00 01 	lds	r24, 0x0100	; 0x800100 <__DATA_REGION_ORIGIN__>
+ 1be:	81 30       	cpi	r24, 0x01	; 1
+ 1c0:	69 f2       	breq	.-102    	; 0x15c <main+0x36>
 
-000001ce <__stop_program>:
- 1ce:	ff cf       	rjmp	.-2      	; 0x1ce <__stop_program>
+	stp();    
+ 1c2:	0e 94 5a 00 	call	0xb4	; 0xb4 <stp>
+	 delay_ms(5000);
+ 1c6:	88 e8       	ldi	r24, 0x88	; 136
+ 1c8:	93 e1       	ldi	r25, 0x13	; 19
+ 1ca:	0e 94 48 00 	call	0x90	; 0x90 <delay_ms>
+	if(interrupt_flag == 1) continue;
+ 1ce:	80 91 00 01 	lds	r24, 0x0100	; 0x800100 <__DATA_REGION_ORIGIN__>
+ 1d2:	81 30       	cpi	r24, 0x01	; 1
+ 1d4:	19 f2       	breq	.-122    	; 0x15c <main+0x36>
+
+	ready();   delay_ms(3000);
+ 1d6:	0e 94 61 00 	call	0xc2	; 0xc2 <ready>
+ 1da:	88 eb       	ldi	r24, 0xB8	; 184
+ 1dc:	9b e0       	ldi	r25, 0x0B	; 11
+ 1de:	0e 94 48 00 	call	0x90	; 0x90 <delay_ms>
+ 1e2:	bc cf       	rjmp	.-136    	; 0x15c <main+0x36>
+
+000001e4 <_exit>:
+ 1e4:	f8 94       	cli
+
+000001e6 <__stop_program>:
+ 1e6:	ff cf       	rjmp	.-2      	; 0x1e6 <__stop_program>
