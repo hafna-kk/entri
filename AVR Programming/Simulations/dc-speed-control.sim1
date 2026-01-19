@@ -1,7 +1,27 @@
 <circuit version="1.1.0-SR1" rev="2005" stepSize="1000000" stepsPS="1000000" NLsteps="100000" reaStep="1000000" animate="0" >
 
-<item itemtype="MCU" CircId="mega328-1" mainComp="false" Show_id="true" Show_Val="false" Pos="40,-116" rotation="0" hflip="1" vflip="1" label="mega328-1" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" Frequency="16 MHz" Program="../../Users/hafna/Desktop/Embedded system/AVR Programming/led-brighness-control/led-brighness-control/Debug/led-brighness-control.hex" Auto_Load="false" saveEepr="true" Logic_Symbol="false" Rst_enabled="false" Ext_Osc="false" Wdt_enabled="false" Clk_Out="false" MainMcu="true" SerialMon="-1" />
+<item itemtype="MCU" CircId="mega328-1" mainComp="false" Show_id="true" Show_Val="false" Pos="112,-188" rotation="0" hflip="1" vflip="1" label="mega328-1" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" Frequency="16 MHz" Program="../dc-motor-speed/dc-motor-speed/Debug/dc-motor-speed.hex" Auto_Load="false" saveEepr="true" Logic_Symbol="false" Rst_enabled="false" Ext_Osc="false" Wdt_enabled="false" Clk_Out="false" MainMcu="true" SerialMon="-1" />
 
-<item itemtype="DcMotor" CircId="DcMotor-2" mainComp="false" Show_id="true" Show_Val="false" Pos="-52,4" rotation="0" hflip="1" vflip="1" label="DcMotor-2" idLabPos="-22,-48" labelrot="0" valLabPos="-14,36" valLabRot="0" RPM_Nominal="60 _RPM" Volt_Nominal="5 V" Resistance="100 Ω" />
+<item itemtype="DcMotor" CircId="DcMotor-2" mainComp="false" Show_id="true" Show_Val="false" Pos="4,-64" rotation="0" hflip="1" vflip="1" label="DcMotor-2" idLabPos="-22,-48" labelrot="0" valLabPos="-14,36" valLabRot="0" RPM_Nominal="60 _RPM" Volt_Nominal="5 V" Resistance="100 Ω" />
+
+<item itemtype="Subcircuit" CircId="L293-4" mainComp="false" Show_id="true" Show_Val="false" Pos="-96,-132" rotation="0" hflip="1" vflip="1" label="L293-4" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" Input_High_V="2.5 V" Input_Low_V="2.5 V" Input_Imped="1e+09 Ω" Out_High_V="5 V" Out_Low_V="0 V" Out_Imped="40 Ω" Tpd_ps="10 ns" Tr_ps="3 ns" Tf_ps="4 ns" Logic_Symbol="true" />
+
+<item itemtype="Push" CircId="Push-6" mainComp="false" Show_id="false" Show_Val="false" Pos="68,-132" rotation="0" hflip="1" vflip="1" label="Push-6" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Norm_Close="false" Poles="1" />
+
+<item itemtype="Ground" CircId="Ground-7" mainComp="false" Show_id="false" Show_Val="false" Pos="52,-36" rotation="0" hflip="1" vflip="1" label="Ground-7" idLabPos="-16,8" labelrot="0" valLabPos="-16,20" valLabRot="0" />
+
+<item itemtype="Connector" uid="Connector-4" startpinid="L293-4-2A" endpinid="mega328-1-PORTD0" pointList="-104,-116,-116,-116,-116,-172,104,-172" />
+
+<item itemtype="Connector" uid="Connector-5" startpinid="L293-4-2Y" endpinid="DcMotor-2-lPin" pointList="-56,-116,-36,-116,-36,-64" />
+
+<item itemtype="Connector" uid="Connector-6" startpinid="L293-4-1Y" endpinid="DcMotor-2-rPin" pointList="-56,-124,44,-124,44,-64" />
+
+<item itemtype="Connector" uid="Connector-7" startpinid="L293-4-1A" endpinid="mega328-1-PORTD1" pointList="-104,-124,-104,-164,104,-164" />
+
+<item itemtype="Connector" uid="Connector-9" startpinid="Push-6-pinP0" endpinid="Ground-7-Gnd" pointList="52,-132,52,-52" />
+
+<item itemtype="Connector" uid="Connector-10" startpinid="mega328-1-PORTD2" endpinid="Push-6-switch0pinN" pointList="104,-156,84,-156,84,-132" />
+
+<item itemtype="Connector" uid="Connector-11" startpinid="L293-4-12EN" endpinid="mega328-1-PORTD6" pointList="-104,-108,-124,-108,-124,16,84,16,84,-92,104,-92" />
 
 </circuit>

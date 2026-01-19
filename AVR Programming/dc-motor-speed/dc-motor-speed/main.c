@@ -5,6 +5,8 @@
  * Author : hafna
  */ 
 
+
+
 #define F_CPU 16000000UL
 #include <avr/io.h>
 #include <avr/interrupt.h>
@@ -21,7 +23,7 @@ void delay_ms(unsigned int ms)
 	_delay_ms(1);
 }
 
-// External Interrupt ISR (INT0) 
+// External Interrupt ISR (INT0)
 ISR(INT0_vect)
 {
 	
@@ -60,7 +62,7 @@ int main(void)
 
 	while (1)
 	{
-	
+		
 		if (speed_change_req)
 		{
 			speed_change_req = 0;
