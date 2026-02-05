@@ -467,7 +467,7 @@ else{
   
 
 #include <stdio.h>
-
+/*
 int main()
 {
 
@@ -480,5 +480,95 @@ int main()
     // Directly accessing ptr will give us an address
     printf("%d", ptr);
 
+    return 0;
+}
+    */
+   // C program to find maximum value in an array
+/*
+int main(){
+
+// Initialize an array
+int arr[]={2,3,3,453,567,9};
+
+// Find the size of the array
+int n=sizeof(arr)/sizeof(arr[0]);
+
+// Intialize the variable which will denote the  maximum element
+int maxval=arr[0];
+
+//Find the maximum value in the array and store it in maxval
+
+for(int i=0;i<n;i++){
+   if(maxval<arr[i]){
+    maxval=arr[i];
+    }
+ }
+// print the elements of the array
+  printf("Array Elements: ");
+ for(int i=0;i<n;i++){
+ printf("%d ",arr[i]);
+ }
+  printf("\nmaximum value:%d ",maxval);
+return 0;
+  }
+*/
+
+//C Program to Calculate Sum of Array Elements.
+/*
+int getsum(int arr[] ,int n){
+int sum=0;
+  for(int i=0;i<n;i++){
+     sum +=arr[i];
+    
+  }
+   return sum;
+}
+
+int main(){
+int arr[]={3,4,5};
+int n=sizeof(arr)/sizeof(arr[0]);
+int result=getsum(arr , n);
+printf("sum=%d",result);
+return 0;
+}
+*/
+//Reverse Array in C
+
+/*
+void rev(int arr[] ,int n){
+  int temp[n];
+ 
+for (int i=0;i<n;i++){
+temp[i]=arr[n-1-i];
+}
+for (int i=0;i<n;i++){
+arr[i]=temp[i];
+}
+}
+int main(){
+int arr[]={4,3,2,1};
+int n=sizeof(arr)/sizeof(arr[0]);
+rev(arr,n);
+for (int i=0;i<n;i++){
+printf("%d",arr[i]);
+}
+return 0;
+}
+
+*/
+
+
+int main()
+{
+   
+    int arr[]={5, 15, 25, 35, 45};//initialization
+    int n=sizeof(arr)/sizeof(arr[0]);
+    int sum=0;
+    for(int i=0;i<n;i++){
+      sum+=arr[i];
+     
+      
+    }
+ printf("%d",sum);
     return 0;
 }
