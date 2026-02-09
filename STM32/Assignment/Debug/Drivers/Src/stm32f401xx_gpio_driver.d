@@ -1,0 +1,6 @@
+Drivers/Src/stm32f401xx_gpio_driver.o: \
+ ../Drivers/Src/stm32f401xx_gpio_driver.c \
+ C:/Users/hafna/Desktop/Embedded\ system/STM32/DriverDev/Drivers/Inc/stm32f401xx_gpio_driver.h \
+ C:/Users/hafna/Desktop/Embedded\ system/STM32/DriverDev/Drivers/Inc/stm32f401xx.h
+C:/Users/hafna/Desktop/Embedded\ system/STM32/DriverDev/Drivers/Inc/stm32f401xx_gpio_driver.h:
+C:/Users/hafna/Desktop/Embedded\ system/STM32/DriverDev/Drivers/Inc/stm32f401xx.h:
