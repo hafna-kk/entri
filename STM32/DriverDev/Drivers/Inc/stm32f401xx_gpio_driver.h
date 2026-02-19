@@ -67,7 +67,10 @@ typedef struct {
 	#define GPIO_MODE_OUT      1   // General purpose output mode
 	#define GPIO_MODE_ALTFN    2   // Alternate function mode
 	#define GPIO_MODE_ANALOG   3   // Analog mode
-
+	// Interrupt modes (Handled via EXTI)
+	#define GPIO_MODE_IT_FT     4   // Interrupt Falling edge trigger
+	#define GPIO_MODE_IT_RT     5   // Interrupt Rising edge trigger
+	#define GPIO_MODE_IT_RFT    6   // Interrupt Rising + Falling trigger
 	/*
 	 * @GPIO_PIN_OUTPUT_TYPES
 	 * GPIO pin output types
@@ -110,6 +113,17 @@ typedef struct {
 	#define GPIO_AF_14				12
 	#define GPIO_AF_15				14
 
+
+#define IRQ_NO_EXTI0        6      // EXTI Line 0
+#define IRQ_NO_EXTI1        7      // EXTI Line 1
+#define IRQ_NO_EXTI2        8      // EXTI Line 2
+#define IRQ_NO_EXTI3        9      // EXTI Line 3
+#define IRQ_NO_EXTI4        10     // EXTI Line 4
+#define IRQ_NO_EXTI9_5      23     // EXTI Lines 5-9 (shared)
+#define IRQ_NO_EXTI15_10    40     // EXTI Lines 10-15 (shared)
+
+
+
 void GPIO_PeriClockControl(GPIO_Regdef_t *pGPIOx, uint8_t EnorDi);
 
 void GPIO_Init(GPIO_Handle_t *pGPIOHandle);
@@ -121,6 +135,16 @@ uint16_t GPIO_ReadFromInputPort(GPIO_Regdef_t *pGPIOx);
 void GPIO_WriteToOutputPin(GPIO_Regdef_t *pGPIOx, uint8_t PinNumber, uint8_t Value);
 void GPIO_WriteToOutputPort(GPIO_Regdef_t *pGPIOx, uint16_t Value);
 void GPIO_ToggleOutputPin(GPIO_Regdef_t *pGPIOx, uint8_t PinNumber);
+
+/**********************************
+ * IRQ Configuration and Handling
+ **********************************/
+
+void GPIO_IRQInterruptConfig(uint8_t IRQNumber, uint8_t EnorDi);
+
+void GPIO_IRQPriorityConfig(uint8_t IRQNumber, uint32_t IRQPriority);
+
+void GPIO_IRQHandling(uint8_t PinNumber);
 
 #endif
 /* INC_STM32F401XX_GPIO_DRIVER_H_ */

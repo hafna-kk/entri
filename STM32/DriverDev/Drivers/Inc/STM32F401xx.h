@@ -11,6 +11,23 @@
 #include <stddef.h>
 #include <stdint.h>
 
+
+// Interrupt Set Enable Registers (Enable interrupts)
+#define NVIC_ISER0    ((__vol uint32_t*)0xE000E100)  // IRQ 0-31
+#define NVIC_ISER1    ((__vol uint32_t*)0xE000E104)  // IRQ 32-63
+#define NVIC_ISER2    ((__vol uint32_t*)0xE000E108)  // IRQ 64-95
+
+// Interrupt Clear Enable Registers (Disable interrupts)
+#define NVIC_ICER0    ((__vol uint32_t*)0xE000E180)  // IRQ 0-31
+#define NVIC_ICER1    ((__vol uint32_t*)0xE000E184)  // IRQ 32-63
+#define NVIC_ICER2    ((__vol uint32_t*)0xE000E188)  // IRQ 64-95
+
+// Interrupt Priority Registers
+#define NVIC_PR_BASE_ADDR  ((__vol uint32_t*)0xE000E400)
+
+/* STM32F401 implements 4 priority bits */
+#define NO_PR_BITS_IMPLEMENTED   4
+
 #define __vol  volatile
 #define ENABLE  			1
 #define DISABLE  			0
@@ -143,6 +160,42 @@ typedef struct{
 
 #define RCC 			((RCC_Regdef_t*)RCC_BASEADDR)
 
+#define IRQ_NO_EXTI0        6      // EXTI Line 0
+#define IRQ_NO_EXTI1        7      // EXTI Line 1
+#define IRQ_NO_EXTI2        8      // EXTI Line 2
+#define IRQ_NO_EXTI3        9      // EXTI Line 3
+#define IRQ_NO_EXTI4        10     // EXTI Line 4
+#define IRQ_NO_EXTI9_5      23     // EXTI Lines 5-9 (shared)
+#define IRQ_NO_EXTI15_10    40     // EXTI Lines 10-15 (shared)
+
+
+typedef struct
+{
+    __vol uint32_t IMR;     // Interrupt Mask Register         - Offset: 0x00
+    __vol uint32_t EMR;     // Event Mask Register             - Offset: 0x04
+    __vol uint32_t RTSR;    // Rising Trigger Selection Reg    - Offset: 0x08
+    __vol uint32_t FTSR;    // Falling Trigger Selection Reg   - Offset: 0x0C
+    __vol uint32_t SWIER;   // Software Interrupt Event Reg    - Offset: 0x10
+    __vol uint32_t PR;      // Pending Register                - Offset: 0x14
+} EXTI_RegDef_t;
+
+#define EXTI_BASEADDR  (APB2_PERIBASEADDR + 0x3C00)
+
+
+#define EXTI           ((EXTI_RegDef_t*)EXTI_BASEADDR)
+
+
+typedef struct
+{
+    __vol uint32_t MEMRMP;           // Memory Remap Register       - Offset: 0x00
+    __vol uint32_t PMC;              // Peripheral Mode Config      - Offset: 0x04
+    __vol uint32_t EXTICR[4];        // External Interrupt Config   - Offset: 0x08-0x14
+    uint32_t      RESERVED1[2];     // Reserved                    - Offset: 0x18-0x1C
+    __vol uint32_t CMPCR;            // Compensation Cell Control   - Offset: 0x20
+} SYSCFG_RegDef_t;
+
+#define SYSCFG_BASEADDR (APB2_PERIBASEADDR + 0x3800)
+#define SYSCFG          ((SYSCFG_RegDef_t*)SYSCFG_BASEADDR)
 /*
  * Peripheral register definition structure for GPIO
  * */
@@ -278,15 +331,30 @@ typedef struct{
 #define SPI4_PCLK_DI()     (RCC->APB2ENR &= ~(1 << 13))
 
 /* I2C Clock disable */
-#define I2C1_PCLK_EN()     (RCC->APB1ENR &=~ (1 << 21))
-#define I2C2_PCLK_EN()     (RCC->APB1ENR &=~ (1 << 22))
-#define I2C3_PCLK_EN()     (RCC->APB1ENR &=~ (1 << 23))
+#define I2C1_PCLK_DI()     (RCC->APB1ENR &= ~(1 << 21))
+#define I2C2_PCLK_DI()     (RCC->APB1ENR &= ~(1 << 22))
+#define I2C3_PCLK_DI()     (RCC->APB1ENR &= ~(1 << 23))
+
 
 /* USART Clock disable */
-#define USART1_PCLK_EN()   (RCC->APB2ENR &=~ (1 << 4))
-#define USART2_PCLK_EN()   (RCC->APB1ENR &=~ (1 << 17))
-#define USART6_PCLK_EN()   (RCC->APB2ENR &=~ (1 << 5))
+#define USART1_PCLK_DI()   (RCC->APB2ENR &= ~(1 << 4))
+#define USART2_PCLK_DI()   (RCC->APB1ENR &= ~(1 << 17))
+#define USART6_PCLK_DI()   (RCC->APB2ENR &= ~(1 << 5))
 
+
+#define SYSCFG_PCLK_EN()   (RCC->APB2ENR |= (1 << 14))
+#define SYSCFG_PCLK_DI()   (RCC->APB2ENR &= ~(1 << 14))
+
+
+/*
+ * Convert GPIO base address to port code
+ */
+#define GPIO_BASEADDR_TO_CODE(x)   ( (x == GPIOA) ? 0 : \
+                                     (x == GPIOB) ? 1 : \
+                                     (x == GPIOC) ? 2 : \
+                                     (x == GPIOD) ? 3 : \
+                                     (x == GPIOE) ? 4 : \
+                                     (x == GPIOH) ? 7 : 0 )
 
 
 #endif /* INC_STM32F401XX_H_ */
