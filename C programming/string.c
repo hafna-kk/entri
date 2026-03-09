@@ -128,3 +128,27 @@ int main(){
     return 0;
 }
 */
+
+//Count number of words in a sentence.
+
+
+void count_word(char str[]){
+
+    int i;
+    int count=0;
+    for(i=0;str[i]!='\0';i++){
+        if(str[i]!= ' ' && (i==0 || str[i-1]== ' ')){
+            count++;
+        }
+    }
+
+    printf("count:%d",count);
+}
+
+int main(){
+    char sentence[100];
+    printf("Enter the sentence:");
+    fgets(sentence,100,stdin);
+    count_word(sentence);
+    return 0;
+}

@@ -12,18 +12,6 @@
 
 #include "stm32f401xx.h"
 
-/**********************************
- * Generic Macros
- **********************************/
-
-#define ENABLE              1
-#define DISABLE             0
-#define SET                 ENABLE
-#define RESET               DISABLE
-#define GPIO_PIN_SET        SET
-#define GPIO_PIN_RESET      RESET
-#define FLAG_SET            SET
-#define FLAG_RESET          RESET
 
 
 typedef struct {
@@ -41,6 +29,12 @@ typedef struct {
 	GPIO_Regdef_t *pGPIOx; // Pointer to GPIO port base address
 	GPIO_PinConfig_t GPIO_PinConfig; // Pin configuration settings
 	}GPIO_Handle_t;
+
+
+	/**********************************
+	 * Generic Macros
+	 **********************************/
+
 
 #define GPIO_PIN_NO_0 			0
 #define GPIO_PIN_NO_1 			1
@@ -114,13 +108,6 @@ typedef struct {
 	#define GPIO_AF_15				14
 
 
-#define IRQ_NO_EXTI0        6      // EXTI Line 0
-#define IRQ_NO_EXTI1        7      // EXTI Line 1
-#define IRQ_NO_EXTI2        8      // EXTI Line 2
-#define IRQ_NO_EXTI3        9      // EXTI Line 3
-#define IRQ_NO_EXTI4        10     // EXTI Line 4
-#define IRQ_NO_EXTI9_5      23     // EXTI Lines 5-9 (shared)
-#define IRQ_NO_EXTI15_10    40     // EXTI Lines 10-15 (shared)
 
 
 
