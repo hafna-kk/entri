@@ -5,20 +5,26 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-../Src/GPIO_INT.c \
+../Src/GPIO_LED_TOGGLE.c \
+../Src/bmp280_i2c.c \
 ../Src/main.c \
+../Src/spi_bmp280.c \
 ../Src/syscalls.c \
 ../Src/sysmem.c 
 
 OBJS += \
-./Src/GPIO_INT.o \
+./Src/GPIO_LED_TOGGLE.o \
+./Src/bmp280_i2c.o \
 ./Src/main.o \
+./Src/spi_bmp280.o \
 ./Src/syscalls.o \
 ./Src/sysmem.o 
 
 C_DEPS += \
-./Src/GPIO_INT.d \
+./Src/GPIO_LED_TOGGLE.d \
+./Src/bmp280_i2c.d \
 ./Src/main.d \
+./Src/spi_bmp280.d \
 ./Src/syscalls.d \
 ./Src/sysmem.d 
 
@@ -30,7 +36,7 @@ Src/%.o Src/%.su Src/%.cyclo: ../Src/%.c Src/subdir.mk
 clean: clean-Src
 
 clean-Src:
-	-$(RM) ./Src/GPIO_INT.cyclo ./Src/GPIO_INT.d ./Src/GPIO_INT.o ./Src/GPIO_INT.su ./Src/main.cyclo ./Src/main.d ./Src/main.o ./Src/main.su ./Src/syscalls.cyclo ./Src/syscalls.d ./Src/syscalls.o ./Src/syscalls.su ./Src/sysmem.cyclo ./Src/sysmem.d ./Src/sysmem.o ./Src/sysmem.su
+	-$(RM) ./Src/GPIO_LED_TOGGLE.cyclo ./Src/GPIO_LED_TOGGLE.d ./Src/GPIO_LED_TOGGLE.o ./Src/GPIO_LED_TOGGLE.su ./Src/bmp280_i2c.cyclo ./Src/bmp280_i2c.d ./Src/bmp280_i2c.o ./Src/bmp280_i2c.su ./Src/main.cyclo ./Src/main.d ./Src/main.o ./Src/main.su ./Src/spi_bmp280.cyclo ./Src/spi_bmp280.d ./Src/spi_bmp280.o ./Src/spi_bmp280.su ./Src/syscalls.cyclo ./Src/syscalls.d ./Src/syscalls.o ./Src/syscalls.su ./Src/sysmem.cyclo ./Src/sysmem.d ./Src/sysmem.o ./Src/sysmem.su
 
 .PHONY: clean-Src
 

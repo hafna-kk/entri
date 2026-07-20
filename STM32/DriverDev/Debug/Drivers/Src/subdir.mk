@@ -5,13 +5,31 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-../Drivers/Src/stm32f401xx_gpio_driver.c 
+../Drivers/Src/bmp280.c \
+../Drivers/Src/spi.c \
+../Drivers/Src/stm32f401xx_gpio_driver.c \
+../Drivers/Src/stm32f401xx_i2c_driver.c \
+../Drivers/Src/stm32f401xx_rcc_driver.c \
+../Drivers/Src/stm32f401xx_spi_driver.c \
+../Drivers/Src/stm32f401xx_usart_driver.c 
 
 OBJS += \
-./Drivers/Src/stm32f401xx_gpio_driver.o 
+./Drivers/Src/bmp280.o \
+./Drivers/Src/spi.o \
+./Drivers/Src/stm32f401xx_gpio_driver.o \
+./Drivers/Src/stm32f401xx_i2c_driver.o \
+./Drivers/Src/stm32f401xx_rcc_driver.o \
+./Drivers/Src/stm32f401xx_spi_driver.o \
+./Drivers/Src/stm32f401xx_usart_driver.o 
 
 C_DEPS += \
-./Drivers/Src/stm32f401xx_gpio_driver.d 
+./Drivers/Src/bmp280.d \
+./Drivers/Src/spi.d \
+./Drivers/Src/stm32f401xx_gpio_driver.d \
+./Drivers/Src/stm32f401xx_i2c_driver.d \
+./Drivers/Src/stm32f401xx_rcc_driver.d \
+./Drivers/Src/stm32f401xx_spi_driver.d \
+./Drivers/Src/stm32f401xx_usart_driver.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
@@ -21,7 +39,7 @@ Drivers/Src/%.o Drivers/Src/%.su Drivers/Src/%.cyclo: ../Drivers/Src/%.c Drivers
 clean: clean-Drivers-2f-Src
 
 clean-Drivers-2f-Src:
-	-$(RM) ./Drivers/Src/stm32f401xx_gpio_driver.cyclo ./Drivers/Src/stm32f401xx_gpio_driver.d ./Drivers/Src/stm32f401xx_gpio_driver.o ./Drivers/Src/stm32f401xx_gpio_driver.su
+	-$(RM) ./Drivers/Src/bmp280.cyclo ./Drivers/Src/bmp280.d ./Drivers/Src/bmp280.o ./Drivers/Src/bmp280.su ./Drivers/Src/spi.cyclo ./Drivers/Src/spi.d ./Drivers/Src/spi.o ./Drivers/Src/spi.su ./Drivers/Src/stm32f401xx_gpio_driver.cyclo ./Drivers/Src/stm32f401xx_gpio_driver.d ./Drivers/Src/stm32f401xx_gpio_driver.o ./Drivers/Src/stm32f401xx_gpio_driver.su ./Drivers/Src/stm32f401xx_i2c_driver.cyclo ./Drivers/Src/stm32f401xx_i2c_driver.d ./Drivers/Src/stm32f401xx_i2c_driver.o ./Drivers/Src/stm32f401xx_i2c_driver.su ./Drivers/Src/stm32f401xx_rcc_driver.cyclo ./Drivers/Src/stm32f401xx_rcc_driver.d ./Drivers/Src/stm32f401xx_rcc_driver.o ./Drivers/Src/stm32f401xx_rcc_driver.su ./Drivers/Src/stm32f401xx_spi_driver.cyclo ./Drivers/Src/stm32f401xx_spi_driver.d ./Drivers/Src/stm32f401xx_spi_driver.o ./Drivers/Src/stm32f401xx_spi_driver.su ./Drivers/Src/stm32f401xx_usart_driver.cyclo ./Drivers/Src/stm32f401xx_usart_driver.d ./Drivers/Src/stm32f401xx_usart_driver.o ./Drivers/Src/stm32f401xx_usart_driver.su
 
 .PHONY: clean-Drivers-2f-Src
 

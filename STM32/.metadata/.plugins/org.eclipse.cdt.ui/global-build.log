@@ -1,0 +1,198 @@
+15:11:13 **** Clean-only build of configuration Debug for project DriverDev ****
+make -j8 clean 
+rm -rf ./Startup/startup_stm32f401retx.d ./Startup/startup_stm32f401retx.o
+rm -rf ./Src/GPIO_LED_TOGGLE.cyclo ./Src/GPIO_LED_TOGGLE.d ./Src/GPIO_LED_TOGGLE.o ./Src/GPIO_LED_TOGGLE.su ./Src/bmp280_i2c.cyclo ./Src/bmp280_i2c.d ./Src/bmp280_i2c.o ./Src/bmp280_i2c.su ./Src/main.cyclo ./Src/main.d ./Src/main.o ./Src/main.su ./Src/syscalls.cyclo ./Src/syscalls.d ./Src/syscalls.o ./Src/syscalls.su ./Src/sysmem.cyclo ./Src/sysmem.d ./Src/sysmem.o ./Src/sysmem.su
+rm -rf ./Drivers/Src/stm32f401xx_gpio_driver.cyclo ./Drivers/Src/stm32f401xx_gpio_driver.d ./Drivers/Src/stm32f401xx_gpio_driver.o ./Drivers/Src/stm32f401xx_gpio_driver.su ./Drivers/Src/stm32f401xx_i2c_driver.cyclo ./Drivers/Src/stm32f401xx_i2c_driver.d ./Drivers/Src/stm32f401xx_i2c_driver.o ./Drivers/Src/stm32f401xx_i2c_driver.su ./Drivers/Src/stm32f401xx_rcc_driver.cyclo ./Drivers/Src/stm32f401xx_rcc_driver.d ./Drivers/Src/stm32f401xx_rcc_driver.o ./Drivers/Src/stm32f401xx_rcc_driver.su ./Drivers/Src/stm32f401xx_spi_driver.cyclo ./Drivers/Src/stm32f401xx_spi_driver.d ./Drivers/Src/stm32f401xx_spi_driver.o ./Drivers/Src/stm32f401xx_spi_driver.su ./Drivers/Src/stm32f401xx_usart_driver.cyclo ./Drivers/Src/stm32f401xx_usart_driver.d ./Drivers/Src/stm32f401xx_usart_driver.o ./Drivers/Src/stm32f401xx_usart_driver.su
+rm -rf DriverDev.elf DriverDev.list DriverDev.map default.size.stdout
+ 
+15:11:14 **** Build of configuration Debug for project DriverDev ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f401retx.d" -MT"Startup/startup_stm32f401retx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32f401retx.o" "../Startup/startup_stm32f401retx.s"
+arm-none-eabi-gcc "../Src/GPIO_LED_TOGGLE.c" -mcpu=cortex-m4 -std=gnu11 -g -DDEBUG -DNUCLEO_F401RE -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I../Inc -I"C:/Users/hafna/Desktop/Embedded system/STM32/DriverDev/Drivers/Inc" -I"C:/Users/hafna/Desktop/Embedded system/STM32/DriverDev/Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/GPIO_LED_TOGGLE.d" -MT"Src/GPIO_LED_TOGGLE.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/GPIO_LED_TOGGLE.o"
+arm-none-eabi-gcc "../Src/bmp280_i2c.c" -mcpu=cortex-m4 -std=gnu11 -g -DDEBUG -DNUCLEO_F401RE -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I../Inc -I"C:/Users/hafna/Desktop/Embedded system/STM32/DriverDev/Drivers/Inc" -I"C:/Users/hafna/Desktop/Embedded system/STM32/DriverDev/Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/bmp280_i2c.d" -MT"Src/bmp280_i2c.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/bmp280_i2c.o"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g -DDEBUG -DNUCLEO_F401RE -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I../Inc -I"C:/Users/hafna/Desktop/Embedded system/STM32/DriverDev/Drivers/Inc" -I"C:/Users/hafna/Desktop/Embedded system/STM32/DriverDev/Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/spi_lcd.c" -mcpu=cortex-m4 -std=gnu11 -g -DDEBUG -DNUCLEO_F401RE -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I../Inc -I"C:/Users/hafna/Desktop/Embedded system/STM32/DriverDev/Drivers/Inc" -I"C:/Users/hafna/Desktop/Embedded system/STM32/DriverDev/Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/spi_lcd.d" -MT"Src/spi_lcd.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/spi_lcd.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g -DDEBUG -DNUCLEO_F401RE -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I../Inc -I"C:/Users/hafna/Desktop/Embedded system/STM32/DriverDev/Drivers/Inc" -I"C:/Users/hafna/Desktop/Embedded system/STM32/DriverDev/Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g -DDEBUG -DNUCLEO_F401RE -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I../Inc -I"C:/Users/hafna/Desktop/Embedded system/STM32/DriverDev/Drivers/Inc" -I"C:/Users/hafna/Desktop/Embedded system/STM32/DriverDev/Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc "../Drivers/Src/stm32f401xx_gpio_driver.c" -mcpu=cortex-m4 -std=gnu11 -g -DDEBUG -DNUCLEO_F401RE -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I../Inc -I"C:/Users/hafna/Desktop/Embedded system/STM32/DriverDev/Drivers/Inc" -I"C:/Users/hafna/Desktop/Embedded system/STM32/DriverDev/Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/Src/stm32f401xx_gpio_driver.d" -MT"Drivers/Src/stm32f401xx_gpio_driver.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/Src/stm32f401xx_gpio_driver.o"
+../Src/spi_lcd.c: In function 'main':
+../Src/spi_lcd.c:85:9: error: invalid type argument of '->' (have 'unsigned int')
+   85 |     SPI1->CR1 |= (1 << SPI_CR1_SSI);
+      |         ^~
+../Src/spi_lcd.c:88:9: error: invalid type argument of '->' (have 'unsigned int')
+   88 |     SPI1->CR1 |= (1 << SPI_CR1_SPE);
+      |         ^~
+../Src/spi_lcd.c:95:5: error: expected declaration or statement at end of input
+   95 |     }
+      |     ^
+../Drivers/Src/stm32f401xx_gpio_driver.c: In function 'GPIO_Init':
+../Drivers/Src/stm32f401xx_gpio_driver.c:90:14: warning: unused variable 'temp' [-Wunused-variable]
+   90 |     uint32_t temp = 0;
+      |              ^~~~
+make: *** [Src/subdir.mk:34: Src/spi_lcd.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+15:13:18 **** Incremental Build of configuration Debug for project DriverDev ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/spi_lcd.c" -mcpu=cortex-m4 -std=gnu11 -g -DDEBUG -DNUCLEO_F401RE -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I../Inc -I"C:/Users/hafna/Desktop/Embedded system/STM32/DriverDev/Drivers/Inc" -I"C:/Users/hafna/Desktop/Embedded system/STM32/DriverDev/Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/spi_lcd.d" -MT"Src/spi_lcd.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/spi_lcd.o"
+arm-none-eabi-gcc "../Drivers/Src/stm32f401xx_i2c_driver.c" -mcpu=cortex-m4 -std=gnu11 -g -DDEBUG -DNUCLEO_F401RE -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I../Inc -I"C:/Users/hafna/Desktop/Embedded system/STM32/DriverDev/Drivers/Inc" -I"C:/Users/hafna/Desktop/Embedded system/STM32/DriverDev/Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/Src/stm32f401xx_i2c_driver.d" -MT"Drivers/Src/stm32f401xx_i2c_driver.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/Src/stm32f401xx_i2c_driver.o"
+arm-none-eabi-gcc "../Drivers/Src/stm32f401xx_rcc_driver.c" -mcpu=cortex-m4 -std=gnu11 -g -DDEBUG -DNUCLEO_F401RE -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I../Inc -I"C:/Users/hafna/Desktop/Embedded system/STM32/DriverDev/Drivers/Inc" -I"C:/Users/hafna/Desktop/Embedded system/STM32/DriverDev/Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/Src/stm32f401xx_rcc_driver.d" -MT"Drivers/Src/stm32f401xx_rcc_driver.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/Src/stm32f401xx_rcc_driver.o"
+arm-none-eabi-gcc "../Drivers/Src/stm32f401xx_spi_driver.c" -mcpu=cortex-m4 -std=gnu11 -g -DDEBUG -DNUCLEO_F401RE -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I../Inc -I"C:/Users/hafna/Desktop/Embedded system/STM32/DriverDev/Drivers/Inc" -I"C:/Users/hafna/Desktop/Embedded system/STM32/DriverDev/Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/Src/stm32f401xx_spi_driver.d" -MT"Drivers/Src/stm32f401xx_spi_driver.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/Src/stm32f401xx_spi_driver.o"
+arm-none-eabi-gcc "../Drivers/Src/stm32f401xx_usart_driver.c" -mcpu=cortex-m4 -std=gnu11 -g -DDEBUG -DNUCLEO_F401RE -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I../Inc -I"C:/Users/hafna/Desktop/Embedded system/STM32/DriverDev/Drivers/Inc" -I"C:/Users/hafna/Desktop/Embedded system/STM32/DriverDev/Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/Src/stm32f401xx_usart_driver.d" -MT"Drivers/Src/stm32f401xx_usart_driver.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/Src/stm32f401xx_usart_driver.o"
+../Src/spi_lcd.c: In function 'main':
+../Drivers/Src/stm32f401xx_usart_driver.c: In function 'USART_SetBaudRate':
+../Src/spi_lcd.c:91:5: error: expected declaration or statement at end of input
+   91 |     }
+      |     ^
+../Drivers/Src/stm32f401xx_usart_driver.c:63:20: warning: implicit declaration of function 'RCC_GetPCLK2Value'; did you mean 'RCC_GetPCLK1Value'? [-Wimplicit-function-declaration]
+   63 |            PCLKx = RCC_GetPCLK2Value();
+      |                    ^~~~~~~~~~~~~~~~~
+      |                    RCC_GetPCLK1Value
+make: *** [Src/subdir.mk:34: Src/spi_lcd.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+15:14:30 **** Incremental Build of configuration Debug for project DriverDev ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/spi_lcd.c" -mcpu=cortex-m4 -std=gnu11 -g -DDEBUG -DNUCLEO_F401RE -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I../Inc -I"C:/Users/hafna/Desktop/Embedded system/STM32/DriverDev/Drivers/Inc" -I"C:/Users/hafna/Desktop/Embedded system/STM32/DriverDev/Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/spi_lcd.d" -MT"Src/spi_lcd.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/spi_lcd.o"
+arm-none-eabi-gcc -o "DriverDev.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\hafna\Desktop\Embedded system\STM32\DriverDev\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="DriverDev.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: DriverDev.elf
+ 
+arm-none-eabi-size  DriverDev.elf 
+arm-none-eabi-objdump -h -S DriverDev.elf  > "DriverDev.list"
+   text	   data	    bss	    dec	    hex	filename
+   2468	      0	   1576	   4044	    fcc	DriverDev.elf
+Finished building: default.size.stdout
+ 
+Finished building: DriverDev.list
+ 
+15:39:37 **** Incremental Build of configuration Debug for project DriverDev ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/GPIO_LED_TOGGLE.c" -mcpu=cortex-m4 -std=gnu11 -g -DDEBUG -DNUCLEO_F401RE -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I../Inc -I"C:/Users/hafna/Desktop/Embedded system/STM32/DriverDev/Drivers/Inc" -I"C:/Users/hafna/Desktop/Embedded system/STM32/DriverDev/Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/GPIO_LED_TOGGLE.d" -MT"Src/GPIO_LED_TOGGLE.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/GPIO_LED_TOGGLE.o"
+arm-none-eabi-gcc "../Src/bmp280_i2c.c" -mcpu=cortex-m4 -std=gnu11 -g -DDEBUG -DNUCLEO_F401RE -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I../Inc -I"C:/Users/hafna/Desktop/Embedded system/STM32/DriverDev/Drivers/Inc" -I"C:/Users/hafna/Desktop/Embedded system/STM32/DriverDev/Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/bmp280_i2c.d" -MT"Src/bmp280_i2c.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/bmp280_i2c.o"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g -DDEBUG -DNUCLEO_F401RE -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I../Inc -I"C:/Users/hafna/Desktop/Embedded system/STM32/DriverDev/Drivers/Inc" -I"C:/Users/hafna/Desktop/Embedded system/STM32/DriverDev/Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/spi_bmp280.c" -mcpu=cortex-m4 -std=gnu11 -g -DDEBUG -DNUCLEO_F401RE -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I../Inc -I"C:/Users/hafna/Desktop/Embedded system/STM32/DriverDev/Drivers/Inc" -I"C:/Users/hafna/Desktop/Embedded system/STM32/DriverDev/Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/spi_bmp280.d" -MT"Src/spi_bmp280.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/spi_bmp280.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g -DDEBUG -DNUCLEO_F401RE -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I../Inc -I"C:/Users/hafna/Desktop/Embedded system/STM32/DriverDev/Drivers/Inc" -I"C:/Users/hafna/Desktop/Embedded system/STM32/DriverDev/Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g -DDEBUG -DNUCLEO_F401RE -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I../Inc -I"C:/Users/hafna/Desktop/Embedded system/STM32/DriverDev/Drivers/Inc" -I"C:/Users/hafna/Desktop/Embedded system/STM32/DriverDev/Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc "../Drivers/Src/bmp280.c" -mcpu=cortex-m4 -std=gnu11 -g -DDEBUG -DNUCLEO_F401RE -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I../Inc -I"C:/Users/hafna/Desktop/Embedded system/STM32/DriverDev/Drivers/Inc" -I"C:/Users/hafna/Desktop/Embedded system/STM32/DriverDev/Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/Src/bmp280.d" -MT"Drivers/Src/bmp280.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/Src/bmp280.o"
+arm-none-eabi-gcc "../Drivers/Src/spi.c" -mcpu=cortex-m4 -std=gnu11 -g -DDEBUG -DNUCLEO_F401RE -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I../Inc -I"C:/Users/hafna/Desktop/Embedded system/STM32/DriverDev/Drivers/Inc" -I"C:/Users/hafna/Desktop/Embedded system/STM32/DriverDev/Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/Src/spi.d" -MT"Drivers/Src/spi.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/Src/spi.o"
+../Drivers/Src/bmp280.c: In function 'BMP280_ReadCalibrationData':
+../Drivers/Src/bmp280.c:26:5: warning: implicit declaration of function 'BMP280_ReadRegisters' [-Wimplicit-function-declaration]
+   26 |     BMP280_ReadRegisters(BMP280_REG_CALIB, raw, 24);
+      |     ^~~~~~~~~~~~~~~~~~~~
+../Drivers/Src/bmp280.c: In function 'BMP280_WakeUp':
+../Drivers/Src/bmp280.c:46:5: warning: implicit declaration of function 'BMP280_WriteRegister' [-Wimplicit-function-declaration]
+   46 |     BMP280_WriteRegister(BMP280_REG_CTRL_MEAS, 0x27);
+      |     ^~~~~~~~~~~~~~~~~~~~
+../Drivers/Src/spi.c: In function 'BMP280_SPI_Init':
+../Drivers/Src/spi.c:55:5: warning: implicit declaration of function 'SPI_SSIConfig' [-Wimplicit-function-declaration]
+   55 |     SPI_SSIConfig(SPI1, ENABLE);
+      |     ^~~~~~~~~~~~~
+../Drivers/Src/spi.c:56:5: warning: implicit declaration of function 'SPI_PeripheralControl'; did you mean 'I2C_PeripheralControl'? [-Wimplicit-function-declaration]
+   56 |     SPI_PeripheralControl(SPI1, ENABLE);
+      |     ^~~~~~~~~~~~~~~~~~~~~
+      |     I2C_PeripheralControl
+../Drivers/Src/spi.c: In function 'SPI_Transfer':
+../Drivers/Src/spi.c:62:17: error: invalid type argument of '->' (have 'unsigned int')
+   62 |     while(!(SPI1->SR & (1 << 1))); // Wait TXE
+      |                 ^~
+../Drivers/Src/spi.c:63:9: error: invalid type argument of '->' (have 'unsigned int')
+   63 |     SPI1->DR = data;
+      |         ^~
+../Drivers/Src/spi.c:64:17: error: invalid type argument of '->' (have 'unsigned int')
+   64 |     while(!(SPI1->SR & (1 << 0))); // Wait RXNE
+      |                 ^~
+../Drivers/Src/spi.c:65:16: error: invalid type argument of '->' (have 'unsigned int')
+   65 |     return SPI1->DR;
+      |                ^~
+../Drivers/Src/spi.c:66:1: warning: control reaches end of non-void function [-Wreturn-type]
+   66 | }
+      | ^
+make: *** [Drivers/Src/subdir.mk:37: Drivers/Src/spi.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+15:41:54 **** Incremental Build of configuration Debug for project DriverDev ****
+make -j8 all 
+arm-none-eabi-gcc "../Drivers/Src/spi.c" -mcpu=cortex-m4 -std=gnu11 -g -DDEBUG -DNUCLEO_F401RE -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I../Inc -I"C:/Users/hafna/Desktop/Embedded system/STM32/DriverDev/Drivers/Inc" -I"C:/Users/hafna/Desktop/Embedded system/STM32/DriverDev/Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/Src/spi.d" -MT"Drivers/Src/spi.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/Src/spi.o"
+arm-none-eabi-gcc "../Drivers/Src/stm32f401xx_gpio_driver.c" -mcpu=cortex-m4 -std=gnu11 -g -DDEBUG -DNUCLEO_F401RE -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I../Inc -I"C:/Users/hafna/Desktop/Embedded system/STM32/DriverDev/Drivers/Inc" -I"C:/Users/hafna/Desktop/Embedded system/STM32/DriverDev/Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/Src/stm32f401xx_gpio_driver.d" -MT"Drivers/Src/stm32f401xx_gpio_driver.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/Src/stm32f401xx_gpio_driver.o"
+arm-none-eabi-gcc "../Drivers/Src/stm32f401xx_i2c_driver.c" -mcpu=cortex-m4 -std=gnu11 -g -DDEBUG -DNUCLEO_F401RE -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I../Inc -I"C:/Users/hafna/Desktop/Embedded system/STM32/DriverDev/Drivers/Inc" -I"C:/Users/hafna/Desktop/Embedded system/STM32/DriverDev/Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/Src/stm32f401xx_i2c_driver.d" -MT"Drivers/Src/stm32f401xx_i2c_driver.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/Src/stm32f401xx_i2c_driver.o"
+arm-none-eabi-gcc "../Drivers/Src/stm32f401xx_rcc_driver.c" -mcpu=cortex-m4 -std=gnu11 -g -DDEBUG -DNUCLEO_F401RE -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I../Inc -I"C:/Users/hafna/Desktop/Embedded system/STM32/DriverDev/Drivers/Inc" -I"C:/Users/hafna/Desktop/Embedded system/STM32/DriverDev/Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/Src/stm32f401xx_rcc_driver.d" -MT"Drivers/Src/stm32f401xx_rcc_driver.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/Src/stm32f401xx_rcc_driver.o"
+arm-none-eabi-gcc "../Drivers/Src/stm32f401xx_spi_driver.c" -mcpu=cortex-m4 -std=gnu11 -g -DDEBUG -DNUCLEO_F401RE -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I../Inc -I"C:/Users/hafna/Desktop/Embedded system/STM32/DriverDev/Drivers/Inc" -I"C:/Users/hafna/Desktop/Embedded system/STM32/DriverDev/Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/Src/stm32f401xx_spi_driver.d" -MT"Drivers/Src/stm32f401xx_spi_driver.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/Src/stm32f401xx_spi_driver.o"
+arm-none-eabi-gcc "../Drivers/Src/stm32f401xx_usart_driver.c" -mcpu=cortex-m4 -std=gnu11 -g -DDEBUG -DNUCLEO_F401RE -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I../Inc -I"C:/Users/hafna/Desktop/Embedded system/STM32/DriverDev/Drivers/Inc" -I"C:/Users/hafna/Desktop/Embedded system/STM32/DriverDev/Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/Src/stm32f401xx_usart_driver.d" -MT"Drivers/Src/stm32f401xx_usart_driver.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/Src/stm32f401xx_usart_driver.o"
+../Drivers/Src/spi.c: In function 'BMP280_SPI_Init':
+../Drivers/Src/spi.c:104:5: warning: implicit declaration of function 'SPI_SSIConfig' [-Wimplicit-function-declaration]
+  104 |     SPI_SSIConfig(SPI1, ENABLE);
+      |     ^~~~~~~~~~~~~
+../Drivers/Src/spi.c:107:5: warning: implicit declaration of function 'SPI_PeripheralControl'; did you mean 'I2C_PeripheralControl'? [-Wimplicit-function-declaration]
+  107 |     SPI_PeripheralControl(SPI1, ENABLE);
+      |     ^~~~~~~~~~~~~~~~~~~~~
+      |     I2C_PeripheralControl
+../Drivers/Src/stm32f401xx_usart_driver.c: In function 'USART_SetBaudRate':
+../Drivers/Src/stm32f401xx_usart_driver.c:63:20: warning: implicit declaration of function 'RCC_GetPCLK2Value'; did you mean 'RCC_GetPCLK1Value'? [-Wimplicit-function-declaration]
+   63 |            PCLKx = RCC_GetPCLK2Value();
+      |                    ^~~~~~~~~~~~~~~~~
+      |                    RCC_GetPCLK1Value
+../Drivers/Src/stm32f401xx_gpio_driver.c: In function 'GPIO_Init':
+../Drivers/Src/stm32f401xx_gpio_driver.c:90:14: warning: unused variable 'temp' [-Wunused-variable]
+   90 |     uint32_t temp = 0;
+      |              ^~~~
+arm-none-eabi-gcc -o "DriverDev.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\hafna\Desktop\Embedded system\STM32\DriverDev\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="DriverDev.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Drivers/Src/spi.o: in function `BMP280_SPI_Init':
+C:/Users/hafna/Desktop/Embedded system/STM32/DriverDev/Debug/../Drivers/Src/spi.c:104:(.text.BMP280_SPI_Init+0x32): undefined reference to `SPI_SSIConfig'
+C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/ld.exe: C:/Users/hafna/Desktop/Embedded system/STM32/DriverDev/Debug/../Drivers/Src/spi.c:107:(.text.BMP280_SPI_Init+0x3a): undefined reference to `SPI_PeripheralControl'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:64: DriverDev.elf] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+15:43:05 **** Incremental Build of configuration Debug for project DriverDev ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/GPIO_LED_TOGGLE.c" -mcpu=cortex-m4 -std=gnu11 -g -DDEBUG -DNUCLEO_F401RE -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I../Inc -I"C:/Users/hafna/Desktop/Embedded system/STM32/DriverDev/Drivers/Inc" -I"C:/Users/hafna/Desktop/Embedded system/STM32/DriverDev/Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/GPIO_LED_TOGGLE.d" -MT"Src/GPIO_LED_TOGGLE.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/GPIO_LED_TOGGLE.o"
+arm-none-eabi-gcc "../Src/bmp280_i2c.c" -mcpu=cortex-m4 -std=gnu11 -g -DDEBUG -DNUCLEO_F401RE -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I../Inc -I"C:/Users/hafna/Desktop/Embedded system/STM32/DriverDev/Drivers/Inc" -I"C:/Users/hafna/Desktop/Embedded system/STM32/DriverDev/Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/bmp280_i2c.d" -MT"Src/bmp280_i2c.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/bmp280_i2c.o"
+arm-none-eabi-gcc "../Src/spi_bmp280.c" -mcpu=cortex-m4 -std=gnu11 -g -DDEBUG -DNUCLEO_F401RE -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I../Inc -I"C:/Users/hafna/Desktop/Embedded system/STM32/DriverDev/Drivers/Inc" -I"C:/Users/hafna/Desktop/Embedded system/STM32/DriverDev/Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/spi_bmp280.d" -MT"Src/spi_bmp280.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/spi_bmp280.o"
+arm-none-eabi-gcc "../Drivers/Src/bmp280.c" -mcpu=cortex-m4 -std=gnu11 -g -DDEBUG -DNUCLEO_F401RE -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I../Inc -I"C:/Users/hafna/Desktop/Embedded system/STM32/DriverDev/Drivers/Inc" -I"C:/Users/hafna/Desktop/Embedded system/STM32/DriverDev/Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/Src/bmp280.d" -MT"Drivers/Src/bmp280.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/Src/bmp280.o"
+arm-none-eabi-gcc "../Drivers/Src/spi.c" -mcpu=cortex-m4 -std=gnu11 -g -DDEBUG -DNUCLEO_F401RE -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I../Inc -I"C:/Users/hafna/Desktop/Embedded system/STM32/DriverDev/Drivers/Inc" -I"C:/Users/hafna/Desktop/Embedded system/STM32/DriverDev/Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/Src/spi.d" -MT"Drivers/Src/spi.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/Src/spi.o"
+arm-none-eabi-gcc "../Drivers/Src/stm32f401xx_gpio_driver.c" -mcpu=cortex-m4 -std=gnu11 -g -DDEBUG -DNUCLEO_F401RE -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I../Inc -I"C:/Users/hafna/Desktop/Embedded system/STM32/DriverDev/Drivers/Inc" -I"C:/Users/hafna/Desktop/Embedded system/STM32/DriverDev/Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/Src/stm32f401xx_gpio_driver.d" -MT"Drivers/Src/stm32f401xx_gpio_driver.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/Src/stm32f401xx_gpio_driver.o"
+arm-none-eabi-gcc "../Drivers/Src/stm32f401xx_i2c_driver.c" -mcpu=cortex-m4 -std=gnu11 -g -DDEBUG -DNUCLEO_F401RE -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I../Inc -I"C:/Users/hafna/Desktop/Embedded system/STM32/DriverDev/Drivers/Inc" -I"C:/Users/hafna/Desktop/Embedded system/STM32/DriverDev/Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/Src/stm32f401xx_i2c_driver.d" -MT"Drivers/Src/stm32f401xx_i2c_driver.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/Src/stm32f401xx_i2c_driver.o"
+arm-none-eabi-gcc "../Drivers/Src/stm32f401xx_rcc_driver.c" -mcpu=cortex-m4 -std=gnu11 -g -DDEBUG -DNUCLEO_F401RE -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I../Inc -I"C:/Users/hafna/Desktop/Embedded system/STM32/DriverDev/Drivers/Inc" -I"C:/Users/hafna/Desktop/Embedded system/STM32/DriverDev/Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/Src/stm32f401xx_rcc_driver.d" -MT"Drivers/Src/stm32f401xx_rcc_driver.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/Src/stm32f401xx_rcc_driver.o"
+../Drivers/Src/bmp280.c: In function 'BMP280_ReadCalibrationData':
+../Drivers/Src/bmp280.c:26:5: warning: implicit declaration of function 'BMP280_ReadRegisters' [-Wimplicit-function-declaration]
+   26 |     BMP280_ReadRegisters(BMP280_REG_CALIB, raw, 24);
+      |     ^~~~~~~~~~~~~~~~~~~~
+../Drivers/Src/bmp280.c: In function 'BMP280_WakeUp':
+../Drivers/Src/bmp280.c:46:5: warning: implicit declaration of function 'BMP280_WriteRegister' [-Wimplicit-function-declaration]
+   46 |     BMP280_WriteRegister(BMP280_REG_CTRL_MEAS, 0x27);
+      |     ^~~~~~~~~~~~~~~~~~~~
+../Drivers/Src/stm32f401xx_gpio_driver.c: In function 'GPIO_Init':
+../Drivers/Src/stm32f401xx_gpio_driver.c:90:14: warning: unused variable 'temp' [-Wunused-variable]
+   90 |     uint32_t temp = 0;
+      |              ^~~~
+arm-none-eabi-gcc "../Drivers/Src/stm32f401xx_spi_driver.c" -mcpu=cortex-m4 -std=gnu11 -g -DDEBUG -DNUCLEO_F401RE -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I../Inc -I"C:/Users/hafna/Desktop/Embedded system/STM32/DriverDev/Drivers/Inc" -I"C:/Users/hafna/Desktop/Embedded system/STM32/DriverDev/Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/Src/stm32f401xx_spi_driver.d" -MT"Drivers/Src/stm32f401xx_spi_driver.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/Src/stm32f401xx_spi_driver.o"
+arm-none-eabi-gcc "../Drivers/Src/stm32f401xx_usart_driver.c" -mcpu=cortex-m4 -std=gnu11 -g -DDEBUG -DNUCLEO_F401RE -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I../Inc -I"C:/Users/hafna/Desktop/Embedded system/STM32/DriverDev/Drivers/Inc" -I"C:/Users/hafna/Desktop/Embedded system/STM32/DriverDev/Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/Src/stm32f401xx_usart_driver.d" -MT"Drivers/Src/stm32f401xx_usart_driver.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/Src/stm32f401xx_usart_driver.o"
+../Drivers/Src/stm32f401xx_usart_driver.c: In function 'USART_SetBaudRate':
+../Drivers/Src/stm32f401xx_usart_driver.c:63:20: warning: implicit declaration of function 'RCC_GetPCLK2Value'; did you mean 'RCC_GetPCLK1Value'? [-Wimplicit-function-declaration]
+   63 |            PCLKx = RCC_GetPCLK2Value();
+      |                    ^~~~~~~~~~~~~~~~~
+      |                    RCC_GetPCLK1Value
+arm-none-eabi-gcc -o "DriverDev.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\hafna\Desktop\Embedded system\STM32\DriverDev\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="DriverDev.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: DriverDev.elf
+ 
+arm-none-eabi-size  DriverDev.elf 
+arm-none-eabi-objdump -h -S DriverDev.elf  > "DriverDev.list"
+   text	   data	    bss	    dec	    hex	filename
+  10748	     92	   1932	  12772	   31e4	DriverDev.elf
+Finished building: default.size.stdout
+ 
+Finished building: DriverDev.list
+ 
+15:43:20 **** Incremental Build of configuration Debug for project DriverDev ****
+make -j8 all 
+arm-none-eabi-size  DriverDev.elf 
+   text	   data	    bss	    dec	    hex	filename
+  10748	     92	   1932	  12772	   31e4	DriverDev.elf
+Finished building: default.size.stdout
+ 
+15:44:36 **** Incremental Build of configuration Debug for project DriverDev ****
+make -j8 all 
+arm-none-eabi-size  DriverDev.elf 
+   text	   data	    bss	    dec	    hex	filename
+  10748	     92	   1932	  12772	   31e4	DriverDev.elf
+Finished building: default.size.stdout
+ 
