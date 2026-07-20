@@ -1,0 +1,5 @@
+../Drivers/Src/spi.c:18:6:BMP280_SPI_GPIOInits	1
+../Drivers/Src/spi.c:65:6:BMP280_SPI_Init	1
+../Drivers/Src/spi.c:113:9:SPI_Transfer	1
+../Drivers/Src/spi.c:129:6:BMP280_WriteRegister	1
+../Drivers/Src/spi.c:151:6:BMP280_ReadRegisters	2
