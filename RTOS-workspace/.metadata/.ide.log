@@ -1,0 +1,96 @@
+2026-07-28 13:15:20,382 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] StartTraceHandler.execute(), success : Collect=true
+2026-07-28 13:15:26,395 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] StartTraceHandler.execute(), success : Collect=false
+2026-07-28 13:15:31,804 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] StartTraceHandler.execute(), success : Collect=true
+2026-07-28 13:15:32,021 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] StartTraceHandler.execute(), success : Collect=false
+2026-07-28 13:17:20,576 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] StartTraceHandler.execute(), success : Collect=true
+2026-07-28 13:17:21,923 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] StartTraceHandler.execute(), success : Collect=false
+2026-07-28 13:17:23,354 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] StartTraceHandler.execute(), success : Collect=true
+2026-07-28 13:17:24,522 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] StartTraceHandler.execute(), success : Collect=false
+2026-07-28 13:20:47,246 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] StartTraceHandler.execute(), success : Collect=true
+2026-07-28 13:20:48,607 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] StartTraceHandler.execute(), success : Collect=false
+2026-07-28 13:20:50,731 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] StartTraceHandler.execute(), success : Collect=true
+2026-07-28 13:22:33,084 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] StartTraceHandler.execute(), success : Collect=false
+2026-07-28 13:22:34,999 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] StartTraceHandler.execute(), success : Collect=true
+2026-07-28 13:22:36,901 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] StartTraceHandler.execute(), success : Collect=false
+2026-07-28 13:22:38,962 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] StartTraceHandler.execute(), success : Collect=true
+2026-07-28 13:22:39,740 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] StartTraceHandler.execute(), success : Collect=false
+2026-07-28 13:22:39,973 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] StartTraceHandler.execute(), success : Collect=true
+2026-07-28 13:23:52,773 [INFO] Gpio:278 - dependency for GPIO [RCC, SYS, USART2]
+2026-07-28 13:24:07,515 [INFO] Gpio:278 - dependency for GPIO [RCC, SYS, USART2]
+2026-07-28 13:24:07,585 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2026-07-28 13:24:21,967 [INFO] Gpio:278 - dependency for GPIO [RCC, SYS, USART2]
+2026-07-28 13:24:22,017 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2026-07-28 13:24:34,525 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 988414432 Bytes (1073741824)
+2026-07-28 13:24:36,505 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 720725048 Bytes (1073741824)
+2026-07-28 13:24:38,915 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 810902584 Bytes (1073741824)
+2026-07-28 13:24:39,495 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: NVIC
+2026-07-28 13:24:39,496 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: USART
+2026-07-28 13:24:39,496 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: SYS
+2026-07-28 13:24:39,496 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: GPIO
+2026-07-28 13:24:39,496 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: RCC
+2026-07-28 13:24:39,508 [INFO] CodeGenerator:892 - code generatio: config db path: C:\ST\STM32CubeIDE_1.19.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.15.0.202507011659\\db\
+2026-07-28 13:24:39,604 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\hafna\Desktop\RTOS-workspace\RTOS1\MXTmpFiles\license.tmp_save
+2026-07-28 13:24:39,990 [INFO] CodeEngine:289 - Generated code: C:\Users\hafna\Desktop\RTOS-workspace\RTOS1\MXTmpFiles\license.tmp
+2026-07-28 13:24:40,094 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\hafna\Desktop\RTOS-workspace\RTOS1\MXTmpFiles\gpio.tmp_save
+2026-07-28 13:24:40,337 [INFO] CodeEngine:289 - Generated code: C:\Users\hafna\Desktop\RTOS-workspace\RTOS1\MXTmpFiles\gpio.tmp
+2026-07-28 13:24:40,527 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\hafna\Desktop\RTOS-workspace\RTOS1\Core\Src\stm32f4xx_it.c_save
+2026-07-28 13:24:40,934 [INFO] CodeEngine:289 - Generated code: C:\Users\hafna\Desktop\RTOS-workspace\RTOS1\Core\Src\stm32f4xx_it.c
+2026-07-28 13:24:40,946 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\hafna\Desktop\RTOS-workspace\RTOS1\Core\Inc\stm32f4xx_it.h_save
+2026-07-28 13:24:41,105 [INFO] CodeEngine:289 - Generated code: C:\Users\hafna\Desktop\RTOS-workspace\RTOS1\Core\Inc\stm32f4xx_it.h
+2026-07-28 13:24:41,134 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\hafna\Desktop\RTOS-workspace\RTOS1\Core\Src\stm32f4xx_hal_msp.c_save
+2026-07-28 13:24:41,364 [INFO] CodeEngine:289 - Generated code: C:\Users\hafna\Desktop\RTOS-workspace\RTOS1\Core\Src\stm32f4xx_hal_msp.c
+2026-07-28 13:24:41,374 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\hafna\Desktop\RTOS-workspace\RTOS1\MXTmpFiles\system.tmp_save
+2026-07-28 13:24:41,480 [INFO] CodeEngine:289 - Generated code: C:\Users\hafna\Desktop\RTOS-workspace\RTOS1\MXTmpFiles\system.tmp
+2026-07-28 13:24:41,505 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\hafna\Desktop\RTOS-workspace\RTOS1\Core\Src\stm32f4xx_hal_timebase_tim.c_save
+2026-07-28 13:24:41,636 [INFO] CodeEngine:289 - Generated code: C:\Users\hafna\Desktop\RTOS-workspace\RTOS1\Core\Src\stm32f4xx_hal_timebase_tim.c
+2026-07-28 13:24:41,659 [INFO] CodeEngine:321 - oldGeneratedFile, C:\Users\hafna\Desktop\RTOS-workspace\RTOS1\Core\Inc\stm32f4xx_hal_conf.h_save
+2026-07-28 13:24:41,835 [INFO] CodeEngine:345 - Generated code: C:\Users\hafna\Desktop\RTOS-workspace\RTOS1\Core\Inc\stm32f4xx_hal_conf.h
+2026-07-28 13:24:41,892 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\hafna\Desktop\RTOS-workspace\RTOS1\Core\Inc\main.h_save
+2026-07-28 13:24:42,119 [INFO] CodeEngine:289 - Generated code: C:\Users\hafna\Desktop\RTOS-workspace\RTOS1\Core\Inc\main.h
+2026-07-28 13:24:42,134 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\hafna\Desktop\RTOS-workspace\RTOS1\Core\Src\main.c_save
+2026-07-28 13:24:42,321 [INFO] CodeEngine:289 - Generated code: C:\Users\hafna\Desktop\RTOS-workspace\RTOS1\Core\Src\main.c
+2026-07-28 13:24:43,105 [INFO] ProjectBuilder:3606 - Time for Copy HAL[1] : 461mS.
+2026-07-28 13:24:43,112 [INFO] ProjectBuilder:5216 - Project Generator version: 4.7.0-B52
+2026-07-28 13:24:43,305 [INFO] ConfigFileManager:1595 - The Die is : DIE433
+2026-07-28 13:24:46,076 [INFO] ProjectBuilder:5496 - Time for Generating toolchain IDE Files: 2963mS.
+2026-07-28 13:24:46,077 [INFO] ProjectBuilder:3463 - Time for Copy CMSIS : 1mS.
+2026-07-28 13:24:46,082 [INFO] ProjectBuilder:3463 - Time for Copy CMSIS : 0mS.
+2026-07-28 13:24:48,305 [ERROR] ConfigurationRetriever:142 - IOException on connection: Read timed out
+2026-07-28 13:43:42,780 [INFO] Gpio:278 - dependency for GPIO [RCC, SYS, USART2]
+2026-07-28 13:44:40,784 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 857530440 Bytes (1073741824)
+2026-07-28 13:44:43,269 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 876404808 Bytes (1073741824)
+2026-07-28 13:44:44,977 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 954525768 Bytes (1073741824)
+2026-07-28 13:44:45,757 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: NVIC
+2026-07-28 13:44:45,757 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: USART
+2026-07-28 13:44:45,757 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: SYS
+2026-07-28 13:44:45,758 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: GPIO
+2026-07-28 13:44:45,758 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: RCC
+2026-07-28 13:44:45,760 [INFO] CodeGenerator:892 - code generatio: config db path: C:\ST\STM32CubeIDE_1.19.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.15.0.202507011659\\db\
+2026-07-28 13:44:46,154 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\hafna\Desktop\RTOS-workspace\RTOS1\MXTmpFiles\license.tmp_save
+2026-07-28 13:44:46,797 [INFO] CodeEngine:289 - Generated code: C:\Users\hafna\Desktop\RTOS-workspace\RTOS1\MXTmpFiles\license.tmp
+2026-07-28 13:44:46,950 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\hafna\Desktop\RTOS-workspace\RTOS1\MXTmpFiles\gpio.tmp_save
+2026-07-28 13:44:47,242 [INFO] CodeEngine:289 - Generated code: C:\Users\hafna\Desktop\RTOS-workspace\RTOS1\MXTmpFiles\gpio.tmp
+2026-07-28 13:44:47,649 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\hafna\Desktop\RTOS-workspace\RTOS1\Core\Src\stm32f4xx_it.c_save
+2026-07-28 13:44:48,119 [INFO] CodeEngine:289 - Generated code: C:\Users\hafna\Desktop\RTOS-workspace\RTOS1\Core\Src\stm32f4xx_it.c
+2026-07-28 13:44:48,144 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\hafna\Desktop\RTOS-workspace\RTOS1\Core\Inc\stm32f4xx_it.h_save
+2026-07-28 13:44:48,242 [INFO] CodeEngine:289 - Generated code: C:\Users\hafna\Desktop\RTOS-workspace\RTOS1\Core\Inc\stm32f4xx_it.h
+2026-07-28 13:44:48,299 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\hafna\Desktop\RTOS-workspace\RTOS1\Core\Src\stm32f4xx_hal_msp.c_save
+2026-07-28 13:44:48,514 [INFO] CodeEngine:289 - Generated code: C:\Users\hafna\Desktop\RTOS-workspace\RTOS1\Core\Src\stm32f4xx_hal_msp.c
+2026-07-28 13:44:48,554 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\hafna\Desktop\RTOS-workspace\RTOS1\MXTmpFiles\system.tmp_save
+2026-07-28 13:44:48,612 [INFO] CodeEngine:289 - Generated code: C:\Users\hafna\Desktop\RTOS-workspace\RTOS1\MXTmpFiles\system.tmp
+2026-07-28 13:44:48,644 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\hafna\Desktop\RTOS-workspace\RTOS1\Core\Src\stm32f4xx_hal_timebase_tim.c_save
+2026-07-28 13:44:48,757 [INFO] CodeEngine:289 - Generated code: C:\Users\hafna\Desktop\RTOS-workspace\RTOS1\Core\Src\stm32f4xx_hal_timebase_tim.c
+2026-07-28 13:44:48,801 [INFO] CodeEngine:321 - oldGeneratedFile, C:\Users\hafna\Desktop\RTOS-workspace\RTOS1\Core\Inc\stm32f4xx_hal_conf.h_save
+2026-07-28 13:44:49,017 [INFO] CodeEngine:345 - Generated code: C:\Users\hafna\Desktop\RTOS-workspace\RTOS1\Core\Inc\stm32f4xx_hal_conf.h
+2026-07-28 13:44:49,107 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\hafna\Desktop\RTOS-workspace\RTOS1\Core\Inc\main.h_save
+2026-07-28 13:44:49,285 [INFO] CodeEngine:289 - Generated code: C:\Users\hafna\Desktop\RTOS-workspace\RTOS1\Core\Inc\main.h
+2026-07-28 13:44:49,337 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\hafna\Desktop\RTOS-workspace\RTOS1\Core\Src\main.c_save
+2026-07-28 13:44:49,484 [INFO] CodeEngine:289 - Generated code: C:\Users\hafna\Desktop\RTOS-workspace\RTOS1\Core\Src\main.c
+2026-07-28 13:44:51,168 [INFO] ProjectBuilder:3606 - Time for Copy HAL[1] : 1376mS.
+2026-07-28 13:44:51,174 [INFO] ProjectBuilder:5216 - Project Generator version: 4.7.0-B52
+2026-07-28 13:44:51,330 [INFO] ConfigFileManager:1595 - The Die is : DIE433
+2026-07-28 13:44:53,375 [INFO] ProjectBuilder:5496 - Time for Generating toolchain IDE Files: 2201mS.
+2026-07-28 13:44:53,377 [INFO] ProjectBuilder:3463 - Time for Copy CMSIS : 1mS.
+2026-07-28 13:44:53,384 [INFO] ProjectBuilder:3463 - Time for Copy CMSIS : 0mS.
+2026-07-28 14:00:12,759 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-07-28 14:00:12,781 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
