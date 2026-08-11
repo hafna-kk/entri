@@ -1,0 +1,7 @@
+STM32/.metadata/
+STM32/*/Debug/
+STM32/*/Release/
+STM32/*/.settings/
+STM32/*/Debug/
+
+
